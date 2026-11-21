@@ -275,10 +275,10 @@
 
             </div>
 
+
             <div class="services-grid">
 
-                <!-- TODO: Crear una tarjeta visual por cada servicio -->
-
+                <!-- Servicio 1 -->
                 <article class="service-card">
 
                     <img
@@ -295,13 +295,18 @@
                         principales componentes mecánicos de tu vehículo.
                     </p>
 
-                    <a href="#citas" class="service-link">
-                        Solicitar información
-                    </a>
+                    <button
+                        type="button"
+                        class="service-link"
+                        data-service="mantenimiento"
+                    >
+                        Más información
+                    </button>
 
                 </article>
 
 
+                <!-- Servicio 2 -->
                 <article class="service-card">
 
                     <img
@@ -318,13 +323,18 @@
                         relacionados con el motor.
                     </p>
 
-                    <a href="#citas" class="service-link">
-                        Solicitar información
-                    </a>
+                    <button
+                        type="button"
+                        class="service-link"
+                        data-service="motores"
+                    >
+                        Más información
+                    </button>
 
                 </article>
 
 
+                <!-- Servicio 3 -->
                 <article class="service-card">
 
                     <img
@@ -341,13 +351,18 @@
                         de baterías y sustitución cuando sea necesario.
                     </p>
 
-                    <a href="#citas" class="service-link">
-                        Solicitar información
-                    </a>
+                    <button
+                        type="button"
+                        class="service-link"
+                        data-service="electricidad"
+                    >
+                        Más información
+                    </button>
 
                 </article>
 
 
+                <!-- Servicio 4 -->
                 <article class="service-card">
 
                     <img
@@ -364,13 +379,18 @@
                         y trabajos de pintura.
                     </p>
 
-                    <a href="#citas" class="service-link">
-                        Solicitar información
-                    </a>
+                    <button
+                        type="button"
+                        class="service-link"
+                        data-service="chapa"
+                    >
+                        Más información
+                    </button>
 
                 </article>
 
 
+                <!-- Servicio 5 -->
                 <article class="service-card">
 
                     <img
@@ -387,13 +407,18 @@
                         y componentes del sistema de frenado.
                     </p>
 
-                    <a href="#citas" class="service-link">
-                        Solicitar información
-                    </a>
+                    <button
+                        type="button"
+                        class="service-link"
+                        data-service="frenos"
+                    >
+                        Más información
+                    </button>
 
                 </article>
 
 
+                <!-- Servicio 6 -->
                 <article class="service-card">
 
                     <img
@@ -410,13 +435,64 @@
                         equipos de diagnosis electrónica.
                     </p>
 
-                    <a href="#citas" class="service-link">
-                        Solicitar información
-                    </a>
+                    <button
+                        type="button"
+                        class="service-link"
+                        data-service="diagnosis"
+                    >
+                        Más información
+                    </button>
 
                 </article>
 
             </div>
+
+
+            <!-- ==========================================
+                MODAL REUTILIZABLE DE SERVICIOS
+                ========================================== -->
+
+            <dialog id="service-modal" class="service-modal">
+
+                <div class="modal-content">
+
+                    <!-- Botón para cerrar -->
+                    <button
+                        type="button"
+                        class="modal-close"
+                        aria-label="Cerrar ventana"
+                    >
+                        &times;
+                    </button>
+
+                    <!-- Imagen del servicio -->
+                    <img
+                        id="modal-image"
+                        src=""
+                        alt=""
+                    >
+
+                    <!-- Información del servicio -->
+                    <div class="modal-information">
+
+                        <h2 id="modal-title"></h2>
+
+                        <p id="modal-description"></p>
+
+                        <!-- Enlace para solicitar información -->
+                        <a
+                            href="#citas"
+                            class="btn-primary modal-appointment"
+                        >
+                            Solicitar información
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </dialog>
+
 
             <!-- TODO: Confirmar con el propietario qué servicios ofrece realmente -->
 
