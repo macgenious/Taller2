@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Círculo rojo base -->
+  <circle cx="256" cy="256" r="248" fill="#D52B1E" />
+  
+  <!-- Estrella blanca de 5 puntas inscrita -->
+  <polygon points="256,8 314.3,187.4 503.1,187.4 350.4,298.3 408.7,477.7 256,366.8 103.3,477.7 161.6,298.3 8.9,187.4 197.7,187.4" fill="#FFFFFF" />
+  
+  <!-- Letra "T" central conectada a la base inferior -->
+  <path d="M 192,165 H 320 V 210 H 279 V 365 L 256,385 L 233,365 V 210 H 192 Z" fill="#D52B1E" />
+</svg>

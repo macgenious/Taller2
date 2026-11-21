@@ -1,0 +1,890 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- ==========================================
+         1. CONFIGURACIÓN BÁSICA DEL DOCUMENTO
+         ========================================== -->
+
+    <!-- Codificación de caracteres -->
+    <meta charset="UTF-8">
+
+    <!-- Adaptación a dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Compatibilidad con navegadores -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- TODO: Sustituir por el nombre comercial y la localidad -->
+    <title>TEXACO | Taller Mecánico en Pobla de Vallbona</title>
+
+    <!-- SEO: descripción para los resultados de búsqueda -->
+    <!-- TODO: Personalizar con la ubicación y los servicios reales -->
+    <meta
+        name="description"
+        content="Taller mecánico en Pobla de Vallbona. Especialistas en mantenimiento, reparación y diagnosis de vehículos. Contacta con nosotros y solicita tu cita."
+    >
+
+    <!-- Autor y directrices de indexación -->
+    <meta name="Alejandro" content="TEXACO">
+    <meta name="taller" content="index, follow">
+
+    <!-- Color del navegador en dispositivos compatibles -->
+    <meta name="theme-color" content="##ff0000">
+
+
+    <!-- ==========================================
+         2. SEO TÉCNICO Y URL CANÓNICA
+         ========================================== -->
+
+    <!-- TODO: Sustituir por la URL definitiva de GitHub Pages
+         o por el dominio propio cuando esté configurado 
+
+    <link
+        rel="canonical"
+        href="https://www.tudominio.es/"
+    >     -->
+
+
+    <!-- ==========================================
+         3. IDENTIDAD VISUAL Y RECURSOS
+         ========================================== -->
+
+    <!-- Favicon del negocio -->
+    <link
+        rel="icon"
+        href="assets/images/favicon.svg"
+    >
+
+
+    <!-- ==========================================
+         4. OPEN GRAPH (REDES SOCIALES)
+         ========================================== -->
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Nombre del negocio -->
+    <meta
+        property="og:site_name"
+        content="TEXACO"
+    >
+
+    <meta
+        property="og:title"
+        content="TEXACO | Taller Mecánico en Pobla de Vallbona"
+    >
+
+    <meta
+        property="og:description"
+        content="Tu taller mecánico de confianza en Municipio. Mantenimiento, reparación y atención personalizada."
+    >
+
+    <!-- TODO: Utilizar URL absoluta de la imagen y sustituir el dominio -->
+    <meta
+        property="og:image"
+        content="assets/images/hero.webp"
+    >
+
+    <!-- TODO: Sustituir por la URL definitiva 
+     
+        <meta
+        property="og:url"
+        content="https://www.tudominio.es/"
+    >       -->
+
+
+    <!-- ==========================================
+         5. TWITTER / X CARDS
+         ========================================== 
+         
+        <meta name="twitter:card" content="summary_large_image">
+
+    <meta
+        name="twitter:title"
+        content="Nombre del Taller | Taller Mecánico en Municipio"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Mantenimiento y reparación de vehículos en Municipio. Contacta con nosotros."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://www.tudominio.es/assets/images/hero.webp"
+    >        -->
+
+
+    <!-- ==========================================
+         6. OPTIMIZACIÓN DE CARGA
+         ========================================== -->
+
+    <!-- Precarga de la imagen principal (LCP) -->
+    <link
+        rel="preload"
+        as="image"
+        href="assets/images/hero.webp"
+    >
+
+
+    <!-- ==========================================
+         7. HOJAS DE ESTILO CSS
+         ========================================== -->
+
+    <!-- Normalización de estilos del navegador -->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- Estilos generales de la aplicación -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Componentes reutilizables -->
+    <link rel="stylesheet" href="css/components.css">
+
+    <!-- Adaptación responsive -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <!-- ==========================================
+         8. ARCHIVOS JAVASCRIPT
+         ========================================== -->
+
+    <!-- Lógica principal de la aplicación -->
+    <script src="js/main.js" defer></script>
+
+    <!-- Navegación y menú responsive -->
+    <script src="js/navigation.js" defer></script>
+
+    <!-- Gestión del formulario de contacto y citas -->
+    <script src="js/contact.js" defer></script>
+
+    <!-- Gestión de opiniones de clientes -->
+    <script src="js/reviews.js" defer></script>
+
+</head>
+
+
+<body>
+
+    <!-- ==========================================
+         3. CABECERA Y NAVEGACIÓN
+         ========================================== -->
+
+    <header id="header">
+
+        <!-- Identidad visual del negocio -->
+        <a href="#inicio" class="logo" aria-label="Ir al inicio">
+            <!-- Sustituir por el logotipo real -->
+            <img
+                src="assets/images/logo.svg"
+                alt="Logotipo del taller"
+            >
+        </a>
+
+        <!-- Navegación principal -->
+        <nav id="main-navigation" aria-label="Navegación principal">
+
+            <!-- TODO: Implementar menú responsive y menú hamburguesa -->
+
+            <ul>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#opiniones">Opiniones</a></li>
+                <li><a href="#citas">Solicitar cita</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+        </nav>
+
+        <!-- Acciones de contacto -->
+        <div class="header-actions">
+
+            <!-- TODO: Configurar el teléfono real -->
+            <a href="tel:+34000000000" class="header-phone">
+                Llamar ahora
+            </a>
+
+            <!-- TODO: Configurar el número real de WhatsApp -->
+            <a
+                href="https://wa.me/34000000000"
+                class="header-whatsapp"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contactar con el taller por WhatsApp"
+            >
+                WhatsApp
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ==========================================
+             4. PORTADA PRINCIPAL (HERO)
+             ========================================== -->
+
+        <section id="inicio" aria-labelledby="hero-title">
+
+            <!-- TODO: Añadir fotografía profesional del taller o de un vehículo -->
+            <img
+                src="assets/images/hero.webp"
+                alt="Vehículo en las instalaciones del taller"
+                fetchpriority="high"
+                decoding="async"
+            >
+
+            <div class="hero-content">
+
+                <!-- TODO: Sustituir por el nombre comercial -->
+                <h1 id="hero-title">
+                    TEXACO
+                    <span>Taller mecánico de confianza</span>
+                </h1>
+
+                <!-- TODO: Crear un eslogan que represente al negocio -->
+                <p>
+                    Servicio de mecánica y mantenimiento de vehículos
+                    en La Pobla de Vallbona.
+                    Trabajamos para ofrecerte soluciones cercanas y de confianza.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+        <!-- ==========================================
+             6. SERVICIOS DEL TALLER
+             ========================================== -->
+
+        <section id="servicios" aria-labelledby="services-title">
+
+            <div class="section-heading">
+
+                <h2 id="services-title">
+                    Nuestros servicios
+                </h2>
+
+                <p>
+                    Soluciones profesionales para el mantenimiento
+                    y reparación de tu vehículo.
+                </p>
+
+            </div>
+
+            <div class="services-grid">
+
+                <!-- TODO: Crear una tarjeta visual por cada servicio -->
+
+                <article class="service-card">
+
+                    <img
+                        src="assets/images/image1.webp"
+                        alt="Trabajo de mecánica general en un vehículo"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <h3>Mantenimiento general</h3>
+
+                    <p>
+                        Mantenimiento periódico y reparación de los
+                        principales componentes mecánicos de tu vehículo.
+                    </p>
+
+                    <a href="#citas" class="service-link">
+                        Solicitar información
+                    </a>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <img
+                        src="assets/images/image2.webp"
+                        alt="Reparación de motor de un vehículo"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <h3>Reparación de motores</h3>
+
+                    <p>
+                        Diagnóstico de averías y trabajos de reparación
+                        relacionados con el motor.
+                    </p>
+
+                    <a href="#citas" class="service-link">
+                        Solicitar información
+                    </a>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <img
+                        src="assets/images/image3.webp"
+                        alt="Revisión del sistema eléctrico de un vehículo"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <h3>Baterías y electricidad</h3>
+
+                    <p>
+                        Revisión del sistema eléctrico, comprobación
+                        de baterías y sustitución cuando sea necesario.
+                    </p>
+
+                    <a href="#citas" class="service-link">
+                        Solicitar información
+                    </a>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <img
+                        src="assets/images/image4.webp"
+                        alt="Trabajo de reparación de carrocería"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <h3>Chapa y pintura</h3>
+
+                    <p>
+                        Reparación de daños en la carrocería
+                        y trabajos de pintura.
+                    </p>
+
+                    <a href="#citas" class="service-link">
+                        Solicitar información
+                    </a>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <img
+                        src="assets/images/image5.webp"
+                        alt="Revisión del sistema de frenado"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <h3>Sistemas de frenado</h3>
+
+                    <p>
+                        Revisión y mantenimiento de discos, pastillas
+                        y componentes del sistema de frenado.
+                    </p>
+
+                    <a href="#citas" class="service-link">
+                        Solicitar información
+                    </a>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <img
+                        src="assets/images/image6.webp"
+                        alt="Diagnosis electrónica de un vehículo"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <h3>Diagnosis electrónica</h3>
+
+                    <p>
+                        Detección y análisis de averías mediante
+                        equipos de diagnosis electrónica.
+                    </p>
+
+                    <a href="#citas" class="service-link">
+                        Solicitar información
+                    </a>
+
+                </article>
+
+            </div>
+
+            <!-- TODO: Confirmar con el propietario qué servicios ofrece realmente -->
+
+        </section>
+
+        
+        <!-- ==========================================
+            7. OPINIONES DE LOS CLIENTES
+            ========================================== -->
+
+        <section id="opiniones" aria-labelledby="reviews-title">
+
+            <div class="section-heading">
+
+                <h2 id="reviews-title">
+                    Opiniones de nuestros clientes
+                </h2>
+
+                <p>
+                    La confianza de nuestros clientes es
+                    nuestra mejor recompensa.
+                </p>
+
+                <p>
+                    Consulta las experiencias y valoraciones
+                    de quienes ya han confiado en nuestro taller.
+                </p>
+
+            </div>
+
+            <!-- Enlace externo a las opiniones de Google Maps -->
+            <div class="reviews-link">
+
+                <a
+                    href="https://maps.app.goo.gl/NKE6hRK3tn4XFmF39"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Leer las opiniones del taller en Google Maps (se abre en una nueva pestaña)"
+                >
+                    Leer opiniones
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+            9. RESERVA DE CITAS
+            ========================================== -->
+
+        <section id="citas" aria-labelledby="appointment-title">
+
+            <div class="section-heading">
+
+                <h2 id="appointment-title">
+                    Reserva tu cita
+                </h2>
+
+                <p>
+                    Selecciona el servicio que necesitas y
+                    encuentra el momento que mejor te convenga.
+                </p>
+
+            </div>
+
+            <div class="appointment-services">
+
+                <!-- SERVICIO 1 -->
+
+                <article class="appointment-service">
+
+                    <h3>Revisión de vehículo</h3>
+
+                    <p>
+                        Inspección visual rápida del vehículo y su condición.
+                        Incluye revisión de discos de freno y detección
+                        de sonidos anormales del motor.
+                    </p>
+
+                    <span class="service-duration">
+                        10 minutos
+                    </span>
+
+                    <a
+                        href="https://cal.com/alejandro-vasile-9wdxys/10min"
+                        class="btn-primary js-booking-trigger"
+                        data-booking-url="alejandro-vasile-9wdxys/10min"
+                        target="_blank"
+                    >
+                        Reservar revisión
+                    </a>
+
+                </article>
+
+
+                <!-- SERVICIO 2 -->
+
+                <article class="appointment-service">
+
+                    <h3>Recambio de faros</h3>
+
+                    <p>
+                        Sustitución de faros por avería o daños
+                        ocasionados por golpes.
+                    </p>
+
+                    <span class="service-duration">
+                        1 hora
+                    </span>
+
+                    <a
+                        href="https://cal.com/alejandro-vasile-9wdxys/recambio-faros"
+                        class="btn-primary js-booking-trigger"
+                        data-booking-url="alejandro-vasile-9wdxys/recambio-faros"
+                        target="_blank"
+                    >
+                        Reservar recambio
+                    </a>
+
+                </article>
+
+
+                <!-- SERVICIO 3 -->
+
+                <article class="appointment-service">
+
+                    <h3>Revisión completa del vehículo</h3>
+
+                    <p>
+                        Revisión exhaustiva de 20 puntos
+                        para comprobar el estado general del vehículo.
+                    </p>
+
+                    <span class="service-duration">
+                        1 hora
+                    </span>
+
+                    <a
+                        href="https://cal.com/alejandro-vasile-9wdxys/30min"
+                        class="btn-primary js-booking-trigger"
+                        data-booking-url="alejandro-vasile-9wdxys/30min"
+                        target="_blank"
+                    >
+                        Reservar revisión completa
+                    </a>
+
+                </article>
+
+            </div>
+
+
+        </section>
+
+
+
+        
+        <!-- ==========================================
+            10. HORARIOS Y UBICACIÓN
+            ========================================== -->
+
+        <section id="contacto" aria-labelledby="contact-title">
+
+            <div class="section-heading">
+
+                <h2 id="contact-title">
+                    Visítanos
+                </h2>
+
+                <p>
+                    Estamos aquí para ayudarte.
+                    Contacta con nosotros o ven a visitarnos.
+                </p>
+
+            </div>
+
+
+            <!-- Información de contacto y horarios -->
+            <div class="contact-container">
+
+                <!-- Información de contacto -->
+                <div class="contact-information">
+
+                    <h3>Información de contacto</h3>
+
+                    <div class="contact-item">
+
+                        <h4>Dirección</h4>
+
+                        <!-- TODO: Sustituir por la dirección real -->
+                        <address>
+                            <p>
+                                Calle y número, Código Postal
+                                Municipio, Provincia
+                            </p>
+                        </address>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <h4>Teléfono</h4>
+
+                        <!-- TODO: Sustituir por el teléfono real -->
+                        <a href="tel:+34000000000">
+                            +34 000 000 000
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <h4>Correo electrónico</h4>
+
+                        <!-- TODO: Sustituir por el correo real -->
+                        <a href="mailto:info@taller.com">
+                            info@taller.com
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <h4>WhatsApp</h4>
+
+                        <!-- TODO: Sustituir por el número real -->
+                        <a
+                            href="https://wa.me/34000000000"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Contactar por WhatsApp
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Horarios de atención -->
+                <div class="business-hours">
+
+                    <h3>Nuestro horario</h3>
+
+                    <!-- TODO: Confirmar los horarios con el propietario -->
+
+                    <ul>
+
+                        <li>
+                            <span>Lunes</span>
+                            <span>09:00 - 14:00 / 16:00 - 19:00</span>
+                        </li>
+
+                        <li>
+                            <span>Martes</span>
+                            <span>09:00 - 14:00 / 16:00 - 19:00</span>
+                        </li>
+
+                        <li>
+                            <span>Miércoles</span>
+                            <span>09:00 - 14:00 / 16:00 - 19:00</span>
+                        </li>
+
+                        <li>
+                            <span>Jueves</span>
+                            <span>09:00 - 14:00 / 16:00 - 19:00</span>
+                        </li>
+
+                        <li>
+                            <span>Viernes</span>
+                            <span>09:00 - 14:00 / 16:00 - 19:00</span>
+                        </li>
+
+                        <li>
+                            <span>Sábado</span>
+                            <span>09:00 - 13:00</span>
+                        </li>
+
+                        <li>
+                            <span>Domingo</span>
+                            <span>Cerrado</span>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- Ubicación del establecimiento -->
+            <div class="map-container">
+
+                <!--
+                    TODO:
+                    Añadir una imagen de la ubicación o fachada
+                    del establecimiento si se considera necesario.
+                -->
+
+                <!-- TODO: Sustituir por el enlace real de Google Maps -->
+                <a
+                    href="https://maps.app.goo.gl/NKE6hRK3tn4XFmF39"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Cómo llegar
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    
+    <!-- ==========================================
+        12. PIE DE PÁGINA
+        ========================================== -->
+
+    <footer id="footer">
+
+        <div class="footer-content">
+
+            <!-- IDENTIDAD DEL TALLER -->
+            <div class="footer-brand">
+
+                <a href="#inicio" aria-label="Volver al inicio">
+                    <img
+                        src="assets/images/logo.svg"
+                        alt="Logotipo del taller"
+                        loading="lazy"
+                    >
+                </a>
+
+                <h3>Nombre del Taller</h3>
+
+                <p>
+                    Tu taller de confianza. Profesionalidad,
+                    experiencia y compromiso con cada vehículo.
+                </p>
+
+            </div>
+
+
+            <!-- NAVEGACIÓN -->
+            <nav class="footer-navigation" aria-label="Navegación del pie de página">
+
+                <h3>Enlaces rápidos</h3>
+
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Sobre nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#opiniones">Opiniones</a></li>
+                    <li><a href="#citas">Solicitar cita</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+
+            </nav>
+
+
+            <!-- CONTACTO -->
+            <div class="footer-contact">
+
+                <h3>Contacto</h3>
+
+                <!-- TODO: Sustituir por los datos reales -->
+
+                <p>
+                    <a href="tel:+34000000000">
+                        +34 000 000 000
+                    </a>
+                </p>
+
+                <p>
+                    <a href="mailto:info@taller.com">
+                        info@taller.com
+                    </a>
+                </p>
+
+                <p>
+                    Dirección del taller
+                </p>
+
+                <!-- TODO: Sustituir por el número real de WhatsApp -->
+                <a
+                    href="https://wa.me/34000000000"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="footer-whatsapp"
+                >
+                    Contactar por WhatsApp
+                </a>
+
+            </div>
+
+
+            <!-- REDES SOCIALES -->
+            <div class="footer-social">
+
+                <h3>Síguenos</h3>
+
+                <!-- TODO: Añadir enlaces reales de las redes sociales -->
+
+                <ul>
+
+                    <li>
+                        <a
+                            href="#"
+                            aria-label="Instagram"
+                        >
+                            Instagram
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="#"
+                            aria-label="Facebook"
+                        >
+                            Facebook
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- ENLACES LEGALES -->
+        <div class="footer-legal">
+
+            <a href="pages/aviso-legal.html">
+                Aviso legal
+            </a>
+
+            <a href="pages/privacidad.html">
+                Política de privacidad
+            </a>
+
+            <a href="pages/cookies.html">
+                Política de cookies
+            </a>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+        <div class="footer-copyright">
+
+            <p>
+                &copy; <span id="current-year">2026</span>
+                Nombre del Taller.
+                Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

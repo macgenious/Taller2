@@ -1,0 +1,700 @@
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+
+/* ==========================================
+   TABLETS
+   Hasta 1024px
+   ========================================== */
+
+@media (max-width: 1024px) {
+
+
+    /* HEADER */
+
+    #header {
+
+        padding: 15px 3%;
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    #main-navigation ul {
+
+        gap: 18px;
+
+    }
+
+
+    #main-navigation a {
+
+        font-size: 0.9rem;
+
+    }
+
+
+    .logo img {
+
+        width: 120px;
+    }
+
+
+    .header-actions {
+
+        gap: 10px;
+
+    }
+
+
+    /* HERO */
+
+    #inicio {
+
+        min-height: 550px;
+
+        padding: 70px 7%;
+
+    }
+
+
+    /* SERVICIOS */
+
+    .services-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 25px;
+
+    }
+
+    
+    /* OPINIONES */
+
+    #opiniones {
+
+        padding: 70px 30px;
+
+    }
+
+
+    /* CONTACTO */
+
+    #contacto {
+
+        padding: 70px 30px;
+
+    }
+
+
+    .contact-container {
+
+        gap: 20px;
+
+    }
+
+
+    .contact-information,
+    .business-hours {
+
+        padding: 25px;
+
+    }
+
+
+    .business-hours li {
+
+        font-size: 0.85rem;
+
+        gap: 10px;
+
+    }
+
+    /* CITAS */
+
+
+
+    .appointment-services {
+        gap: 20px;
+    }
+
+    .appointment-service {
+        padding: 22px;
+    }
+
+    .booking-modal {
+        width: 94vw;
+        height: 88vh;
+    }
+
+
+}
+
+
+/* ==========================================
+   MÓVILES
+   Hasta 767px
+   ========================================== */
+
+@media (max-width: 767px) {
+
+
+    /* HEADER */
+
+    #header {
+
+        justify-content: center;
+
+        padding: 15px 20px;
+
+        gap: 15px;
+
+    }
+
+
+    .logo img {
+
+        width: 115px;
+
+    }
+
+    .header-actions {
+
+        gap: 8px;
+
+    }
+
+
+    #main-navigation {
+
+        width: 100%;
+
+        justify-content: center;
+
+        order: 3;
+
+    }
+
+
+    #main-navigation ul {
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 12px 20px;
+
+    }
+
+
+    #main-navigation a {
+
+        font-size: 0.85rem;
+
+    }
+
+
+    .header-phone,
+    .header-whatsapp {
+
+        padding: 9px 12px;
+
+        font-size: 0.8rem;
+
+    }
+
+
+    /* HERO */
+
+    #inicio {
+
+        min-height: 550px;
+
+        padding: 60px 25px;
+
+        justify-content: center;
+
+        text-align: center;
+
+    }
+
+
+    .hero-content {
+
+        width: 100%;
+
+    }
+
+
+    .hero-content h1 {
+
+        align-items: center;
+
+        font-size: clamp(2.8rem, 12vw, 4rem);
+
+    }
+
+
+    .hero-content h1 span {
+
+        font-size: 1.3rem;
+
+    }
+
+
+    .hero-content p {
+
+        font-size: 1rem;
+
+        margin-top: 20px;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .hero-actions {
+
+        justify-content: center;
+
+        gap: 12px;
+
+    }
+
+
+    /* SERVICIOS */
+
+    #servicios {
+
+        padding: 60px 20px;
+
+    }
+
+
+    .section-heading {
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .services-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        max-width: 450px;
+
+    }
+
+
+    .service-card img {
+
+        height: 230px;
+
+    }
+
+
+    /* OPINIONES */
+
+    #opiniones {
+
+        padding: 60px 20px;
+
+    }
+
+
+    .reviews-link a {
+
+        width: 100%;
+
+        max-width: 350px;
+
+    }
+
+
+    /* CONTACTO */
+
+    #contacto {
+
+        padding: 60px 20px;
+
+    }
+
+
+    /* One column instead of two */
+
+    .contact-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+    }
+
+
+    /* Contact cards */
+
+    .contact-information,
+    .business-hours {
+
+        padding: 25px;
+
+    }
+
+
+    /* Location */
+
+    .map-container {
+
+        margin-top: 25px;
+
+        padding: 25px;
+
+    }
+
+
+    .map-container a {
+
+        width: 100%;
+
+        max-width: 350px;
+
+    }
+
+    /* CITAS */
+
+
+
+    .appointment-services {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        gap: 20px;
+    }
+
+    .appointment-service {
+        padding: 25px;
+    }
+
+    .booking-modal {
+        width: 100%;
+        height: 100%;
+        max-height: none;
+
+        border-radius: 0;
+    }
+
+    .booking-modal-header {
+        padding: 12px 18px;
+    }
+
+    .booking-modal-header h3 {
+        font-size: 1.05rem;
+    }
+
+    .cal-booking-container iframe {
+        min-height: 600px;
+    }
+
+
+
+
+}
+
+
+/* ==========================================
+   MÓVILES PEQUEÑOS
+   Hasta 480px
+   ========================================== */
+
+@media (max-width: 480px) {
+
+
+    /* HEADER */
+
+    #header {
+
+        gap: 12px;
+
+    }
+
+
+    .header-phone,
+    .header-whatsapp {
+
+        padding: 8px 10px;
+
+        font-size: 0.75rem;
+
+    }
+
+
+    #main-navigation ul {
+
+        gap: 10px 15px;
+
+    }
+
+    .header-actions {
+
+        gap: 6px;
+
+    }
+
+
+    /* HERO */
+
+    #inicio {
+
+        min-height: 500px;
+
+        padding: 50px 18px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 2.8rem;
+
+    }
+
+
+    .hero-content h1 span {
+
+        font-size: 1.1rem;
+
+    }
+
+
+    .hero-actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .hero-actions a {
+
+        width: 100%;
+
+    }
+
+
+    /* SERVICIOS */
+
+    .service-card h3 {
+
+        font-size: 1.15rem;
+
+    }
+
+
+    .service-card img {
+
+        height: 200px;
+
+    }
+
+
+    /* OPINIONES */
+
+    #opiniones {
+
+        padding: 50px 18px;
+
+    }
+
+
+    .reviews-link a {
+
+        font-size: 0.9rem;
+
+        padding: 13px 20px;
+
+    }
+
+
+    /* CONTACTO */
+
+    #contacto {
+
+        padding: 50px 18px;
+
+    }
+
+
+    .contact-information,
+    .business-hours {
+
+        padding: 20px;
+
+    }
+
+
+    .contact-information h3,
+    .business-hours h3 {
+
+        font-size: 1.2rem;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .contact-information {
+
+        gap: 20px;
+
+    }
+
+
+    /* Opening hours */
+
+    .business-hours li {
+
+        align-items: flex-start;
+
+        font-size: 0.8rem;
+
+        gap: 8px;
+
+    }
+
+
+    .business-hours li span:last-child {
+
+        max-width: 65%;
+
+    }
+
+
+    /* Location */
+
+    .map-container {
+
+        padding: 20px;
+
+    }
+
+
+    .map-container a {
+
+        font-size: 0.9rem;
+
+        padding: 12px 20px;
+
+    }
+
+    /* CITAS */
+
+
+
+    .appointment-service {
+        padding: 20px;
+    }
+
+    .appointment-service h3 {
+        font-size: 1.15rem;
+    }
+
+    .appointment-service p {
+        font-size: 0.9rem;
+    }
+
+    .booking-modal-header {
+        padding: 10px 15px;
+    }
+
+    .booking-modal-close {
+        width: 36px;
+        height: 36px;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   FOOTER RESPONSIVE
+   ========================================== */
+
+
+/* TABLETS */
+
+@media (max-width: 1024px) {
+
+    .footer-content {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 40px;
+
+    }
+
+}
+
+
+/* MÓVILES */
+
+@media (max-width: 767px) {
+
+    .footer-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 45px 25px;
+
+    }
+
+
+    .footer-brand p {
+
+        max-width: 100%;
+
+    }
+
+
+    .footer-legal {
+
+        flex-direction: column;
+
+        gap: 18px;
+
+        text-align: center;
+
+    }
+
+
+    .footer-copyright {
+
+        padding: 20px 15px;
+
+    }
+
+}

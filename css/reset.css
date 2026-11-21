@@ -1,0 +1,101 @@
+
+/* ==========================================
+   RESET CSS
+   Eliminar estilos predeterminados
+   ========================================== */
+
+/* Modelo de caja consistente */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Comportamiento de desplazamiento */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+
+/* Configuración general del documento */
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* Elementos multimedia */
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* Formularios */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* Enlaces */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* Listas */
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+/* Encabezados */
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+}
+
+
+/* Accesibilidad: foco visible */
+
+:focus-visible {
+    outline: 3px solid #FF0000;
+    outline-offset: 4px;
+}
+
+
+/* Respetar preferencias de movimiento */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
