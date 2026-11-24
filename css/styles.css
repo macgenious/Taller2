@@ -145,9 +145,9 @@ main {
 
     width: 100%;
 
-    min-height: 85px;
+    min-height: 65px;
 
-    padding: 12px 5%;
+    padding: 8px 5%;
 
     display: flex;
 
@@ -181,7 +181,7 @@ main {
 
 .logo img {
 
-    width: 150px;
+    width: 100px;
 
     height: auto;
 
