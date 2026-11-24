@@ -340,7 +340,7 @@ main {
 
     position: relative;
 
-    min-height: 620px;
+    min-height: 82vh;
 
     width: 100%;
 
@@ -1049,6 +1049,8 @@ main {
 
     margin: 0 auto;
 
+    padding: 15px;
+
 }
 
 
@@ -1253,103 +1255,6 @@ main {
 .business-hours li:last-child {
 
     border-bottom: none;
-
-}
-
-
-/* ==========================================
-   UBICACIÓN Y GOOGLE MAPS
-   ========================================== */
-
-.map-container {
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    max-width: var(--container-width);
-
-    margin: 35px auto 0;
-
-    padding: 35px;
-
-    background-color: var(--color-white);
-
-    border: 1px solid var(--color-border);
-
-    border-radius: 10px;
-
-    box-shadow: var(--shadow-card);
-
-}
-
-
-/* Enlace para llegar al establecimiento */
-
-.map-container a {
-
-    display: inline-flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    min-height: 50px;
-
-    padding: 14px 35px;
-
-    background-color: var(--color-primary);
-
-    color: var(--color-white);
-
-    font-size: 1rem;
-
-    font-weight: 700;
-
-    text-decoration: none;
-
-    border: 2px solid var(--color-primary);
-
-    border-radius: 6px;
-
-    transition: var(--transition);
-
-}
-
-
-/* Efecto hover */
-
-.map-container a:hover {
-
-    background-color: transparent;
-
-    color: var(--color-primary);
-
-    transform: translateY(-3px);
-
-    box-shadow: var(--shadow-card);
-
-}
-
-
-/* Accesibilidad */
-
-.map-container a:focus-visible {
-
-    outline: 3px solid var(--color-text);
-
-    outline-offset: 4px;
-
-}
-
-
-/* Efecto al pulsar */
-
-.map-container a:active {
-
-    transform: translateY(0);
 
 }
 
@@ -1746,3 +1651,110 @@ main {
     line-height: 1.6;
 
 }
+
+
+
+
+/* ==========================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================== */
+
+/* Estado inicial: elementos ocultos */
+
+.js .reveal {
+
+    opacity: 0;
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+
+    will-change: opacity, transform;
+
+}
+
+
+/* Animación Fade Up */
+
+.js .reveal-up {
+
+    transform: translateY(45px);
+
+}
+
+
+/* Animación Fade Left */
+
+.js .reveal-left {
+
+    transform: translateX(-45px);
+
+}
+
+
+/* Animación Fade Right */
+
+.js .reveal-right {
+
+    transform: translateX(45px);
+
+}
+
+
+/* Animación Scale */
+
+.js .reveal-scale {
+
+    transform: scale(0.92);
+
+}
+
+
+/* Estado visible */
+
+.js .reveal.visible {
+
+    opacity: 1;
+
+    transform: translate(0, 0) scale(1);
+
+}
+
+
+/* Retrasos para animaciones escalonadas */
+
+.js .delay-1 {
+    transition-delay: 0.1s;
+}
+
+.js .delay-2 {
+    transition-delay: 0.2s;
+}
+
+.js .delay-3 {
+    transition-delay: 0.3s;
+}
+
+.js .delay-4 {
+    transition-delay: 0.4s;
+}
+
+
+/* Accesibilidad */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .js .reveal {
+
+        opacity: 1;
+
+        transform: none;
+
+        transition: none;
+
+    }
+
+}
+
+
+

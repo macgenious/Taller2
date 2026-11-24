@@ -233,3 +233,57 @@ appointmentButton.addEventListener("click", () => {
     serviceModal.close();
 
 });
+
+
+
+
+
+/* ==========================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================== */
+
+// Indicamos que JavaScript está disponible
+document.documentElement.classList.add("js");
+
+// Seleccionamos todos los elementos animables
+const revealElements = document.querySelectorAll(".reveal");
+
+    // Comprobamos la disponibilidad de Intersection Observer
+    if ("IntersectionObserver" in window) {
+
+        const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("visible");
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        }
+    );
+
+    revealElements.forEach(element => {
+        revealObserver.observe(element);
+    });
+
+    } else {
+
+        // Fallback para navegadores sin soporte
+        revealElements.forEach(element => {
+
+            element.classList.add("visible");
+
+        });
+
+}

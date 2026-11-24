@@ -1,0 +1,4001 @@
+
+==================== ARCHIVO: css\components.css ====================
+
+
+/* ==========================================
+   COMPONENTES REUTILIZABLES
+   ========================================== */
+
+
+/* ==========================================
+   BOTONES GENERALES
+   ========================================== */
+
+.btn-primary,
+.btn-secondary {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 12px 25px;
+
+    border-radius: 5px;
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+
+}
+
+
+/* Botón principal */
+
+.btn-primary {
+
+    background-color: var(--color-primary);
+
+    border: 2px solid var(--color-primary);
+
+    color: var(--color-white);
+
+}
+
+
+.btn-primary:hover {
+
+    background-color: var(--color-white);
+
+    color: var(--color-primary);
+
+}
+
+
+/* Botón secundario */
+
+.btn-secondary {
+
+    background-color: transparent;
+
+    border: 2px solid var(--color-white);
+
+    color: var(--color-white);
+
+}
+
+
+.btn-secondary:hover {
+
+    background-color: var(--color-white);
+
+    color: var(--color-primary);
+
+}
+
+
+/* Interacción mediante teclado */
+
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.service-link:focus-visible {
+
+    outline: 3px solid var(--color-primary);
+
+    outline-offset: 4px;
+
+}
+
+
+
+/* ==========================================
+   7. OPINIONES DE LOS CLIENTES
+   ========================================== */
+
+#opiniones {
+
+    padding: var(--section-padding);
+
+    background-color: var(--color-background);
+
+}
+
+
+/* Contenedor del enlace */
+
+.reviews-link {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+/* Botón para consultar opiniones */
+
+.reviews-link a {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 15px 35px;
+
+    background-color: var(--color-primary);
+
+    color: var(--color-white);
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    border: 2px solid var(--color-primary);
+
+    transition: var(--transition);
+
+}
+
+
+/* Efecto hover */
+
+.reviews-link a:hover {
+
+    background-color: transparent;
+
+    color: var(--color-primary);
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow-card);
+
+}
+
+
+/* Accesibilidad: navegación mediante teclado */
+
+.reviews-link a:focus-visible {
+
+    outline: 3px solid var(--color-text);
+
+    outline-offset: 4px;
+
+}
+
+==================== ARCHIVO: css\reset.css ====================
+
+
+/* ==========================================
+   RESET CSS
+   Eliminar estilos predeterminados
+   ========================================== */
+
+/* Modelo de caja consistente */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Comportamiento de desplazamiento */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+
+/* Configuración general del documento */
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* Elementos multimedia */
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* Formularios */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* Enlaces */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* Listas */
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+/* Encabezados */
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+}
+
+
+/* Accesibilidad: foco visible */
+
+:focus-visible {
+    outline: 3px solid #FF0000;
+    outline-offset: 4px;
+}
+
+
+/* Respetar preferencias de movimiento */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+==================== ARCHIVO: css\responsive.css ====================
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+
+/* ==========================================
+   TABLETS
+   Hasta 1024px
+   ========================================== */
+
+@media (max-width: 1024px) {
+
+
+    /* HEADER */
+
+    #header {
+
+        padding: 15px 3%;
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    #main-navigation ul {
+
+        gap: 18px;
+
+    }
+
+
+    #main-navigation a {
+
+        font-size: 0.9rem;
+
+    }
+
+
+    .logo img {
+
+        width: 120px;
+    }
+
+
+    .header-actions {
+
+        gap: 10px;
+
+    }
+
+
+    /* HERO */
+
+    #inicio {
+
+        min-height: 550px;
+
+        padding: 70px 7%;
+
+    }
+
+
+    /* SERVICIOS */
+
+    .services-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 25px;
+
+    }
+
+    
+    /* OPINIONES */
+
+    #opiniones {
+
+        padding: 70px 30px;
+
+    }
+
+
+    /* CONTACTO */
+
+    #contacto {
+
+        padding: 70px 30px;
+
+    }
+
+
+    .contact-container {
+
+        gap: 20px;
+
+    }
+
+
+    .contact-information,
+    .business-hours {
+
+        padding: 25px;
+
+    }
+
+
+    .business-hours li {
+
+        font-size: 0.85rem;
+
+        gap: 10px;
+
+    }
+
+    /* CITAS */
+
+
+
+    .appointment-services {
+        gap: 20px;
+    }
+
+    .appointment-service {
+        padding: 22px;
+    }
+
+    .booking-modal {
+        width: 94vw;
+        height: 88vh;
+    }
+
+
+}
+
+
+/* ==========================================
+   MÓVILES
+   Hasta 767px
+   ========================================== */
+
+@media (max-width: 767px) {
+
+
+    /* HEADER */
+
+    #header {
+
+        justify-content: center;
+
+        padding: 15px 20px;
+
+        gap: 15px;
+
+    }
+
+
+    .logo img {
+
+        width: 115px;
+
+    }
+
+    .header-actions {
+
+        gap: 8px;
+
+    }
+
+
+    #main-navigation {
+
+        width: 100%;
+
+        justify-content: center;
+
+        order: 3;
+
+    }
+
+
+    #main-navigation ul {
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 12px 20px;
+
+    }
+
+
+    #main-navigation a {
+
+        font-size: 0.85rem;
+
+    }
+
+
+    .header-phone,
+    .header-whatsapp {
+
+        padding: 9px 12px;
+
+        font-size: 0.8rem;
+
+    }
+
+
+    /* HERO */
+
+    #inicio {
+
+        min-height: 550px;
+
+        padding: 60px 25px;
+
+        justify-content: center;
+
+        text-align: center;
+
+    }
+
+
+    .hero-content {
+
+        width: 100%;
+
+    }
+
+
+    .hero-content h1 {
+
+        align-items: center;
+
+        font-size: clamp(2.8rem, 12vw, 4rem);
+
+    }
+
+
+    .hero-content h1 span {
+
+        font-size: 1.3rem;
+
+    }
+
+
+    .hero-content p {
+
+        font-size: 1rem;
+
+        margin-top: 20px;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .hero-actions {
+
+        justify-content: center;
+
+        gap: 12px;
+
+    }
+
+
+    /* SERVICIOS */
+
+    #servicios {
+
+        padding: 60px 20px;
+
+    }
+
+
+    .section-heading {
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .services-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        max-width: 450px;
+
+    }
+
+
+    .service-card img {
+
+        height: 230px;
+
+    }
+
+
+    /* OPINIONES */
+
+    #opiniones {
+
+        padding: 60px 20px;
+
+    }
+
+
+    .reviews-link a {
+
+        width: 100%;
+
+        max-width: 350px;
+
+    }
+
+
+    /* CONTACTO */
+
+    #contacto {
+
+        padding: 60px 20px;
+
+    }
+
+
+    /* One column instead of two */
+
+    .contact-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+    }
+
+
+    /* Contact cards */
+
+    .contact-information,
+    .business-hours {
+
+        padding: 25px;
+
+    }
+
+
+    /* Location */
+
+    .map-container {
+
+        margin-top: 25px;
+
+        padding: 25px;
+
+    }
+
+
+    .map-container a {
+
+        width: 100%;
+
+        max-width: 350px;
+
+    }
+
+    /* CITAS */
+
+
+
+    .appointment-services {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        gap: 20px;
+    }
+
+    .appointment-service {
+        padding: 25px;
+    }
+
+    .booking-modal {
+        width: 100%;
+        height: 100%;
+        max-height: none;
+
+        border-radius: 0;
+    }
+
+    .booking-modal-header {
+        padding: 12px 18px;
+    }
+
+    .booking-modal-header h3 {
+        font-size: 1.05rem;
+    }
+
+    .cal-booking-container iframe {
+        min-height: 600px;
+    }
+
+
+
+
+}
+
+
+/* ==========================================
+   MÓVILES PEQUEÑOS
+   Hasta 480px
+   ========================================== */
+
+@media (max-width: 480px) {
+
+
+    /* HEADER */
+
+    #header {
+
+        gap: 12px;
+
+    }
+
+
+    .header-phone,
+    .header-whatsapp {
+
+        padding: 8px 10px;
+
+        font-size: 0.75rem;
+
+    }
+
+
+    #main-navigation ul {
+
+        gap: 10px 15px;
+
+    }
+
+    .header-actions {
+
+        gap: 6px;
+
+    }
+
+
+    /* HERO */
+
+    #inicio {
+
+        min-height: 500px;
+
+        padding: 50px 18px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 2.8rem;
+
+    }
+
+
+    .hero-content h1 span {
+
+        font-size: 1.1rem;
+
+    }
+
+
+    .hero-actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .hero-actions a {
+
+        width: 100%;
+
+    }
+
+
+    /* SERVICIOS */
+
+    .service-card h3 {
+
+        font-size: 1.15rem;
+
+    }
+
+
+    .service-card img {
+
+        height: 200px;
+
+    }
+
+
+    /* OPINIONES */
+
+    #opiniones {
+
+        padding: 50px 18px;
+
+    }
+
+
+    .reviews-link a {
+
+        font-size: 0.9rem;
+
+        padding: 13px 20px;
+
+    }
+
+
+    /* CONTACTO */
+
+    #contacto {
+
+        padding: 50px 18px;
+
+    }
+
+
+    .contact-information,
+    .business-hours {
+
+        padding: 20px;
+
+    }
+
+
+    .contact-information h3,
+    .business-hours h3 {
+
+        font-size: 1.2rem;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .contact-information {
+
+        gap: 20px;
+
+    }
+
+
+    /* Opening hours */
+
+    .business-hours li {
+
+        align-items: flex-start;
+
+        font-size: 0.8rem;
+
+        gap: 8px;
+
+    }
+
+
+    .business-hours li span:last-child {
+
+        max-width: 65%;
+
+    }
+
+
+    /* Location */
+
+    .map-container {
+
+        padding: 20px;
+
+    }
+
+
+    .map-container a {
+
+        font-size: 0.9rem;
+
+        padding: 12px 20px;
+
+    }
+
+    /* CITAS */
+
+
+
+    .appointment-service {
+        padding: 20px;
+    }
+
+    .appointment-service h3 {
+        font-size: 1.15rem;
+    }
+
+    .appointment-service p {
+        font-size: 0.9rem;
+    }
+
+    .booking-modal-header {
+        padding: 10px 15px;
+    }
+
+    .booking-modal-close {
+        width: 36px;
+        height: 36px;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   FOOTER RESPONSIVE
+   ========================================== */
+
+
+/* TABLETS */
+
+@media (max-width: 1024px) {
+
+    .footer-content {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 40px;
+
+    }
+
+}
+
+
+/* MÓVILES */
+
+@media (max-width: 767px) {
+
+    .footer-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 45px 25px;
+
+    }
+
+
+    .footer-brand p {
+
+        max-width: 100%;
+
+    }
+
+
+    .footer-legal {
+
+        flex-direction: column;
+
+        gap: 18px;
+
+        text-align: center;
+
+    }
+
+
+    .footer-copyright {
+
+        padding: 20px 15px;
+
+    }
+
+}
+
+==================== ARCHIVO: css\styles.css ====================
+
+
+/* ==========================================
+   VARIABLES GLOBALES
+   ========================================== */
+
+:root {
+
+    /* Colores principales */
+
+    --color-primary: #FF0000;
+    --color-white: #FFFFFF;
+    --color-gray: #C9C9C9;
+
+    /* Colores complementarios para legibilidad */
+
+    --color-text: #222222;
+    --color-text-light: #FFFFFF;
+    --color-background: #FFFFFF;
+    --color-background-alt: #F5F5F5;
+
+    /* Bordes y sombras */
+
+    --color-border: #C9C9C9;
+
+    --shadow-card:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+    --shadow-hover:
+        0 8px 25px rgba(0, 0, 0, 0.14);
+
+    /* Tipografía */
+
+    --font-main: Arial, Helvetica, sans-serif;
+
+    /* Ancho máximo del contenido */
+
+    --container-width: 1200px;
+
+    /* Espaciado */
+
+    --section-padding: 80px 20px;
+
+    /* Transiciones */
+
+    --transition: 0.3s ease;
+
+}
+
+
+
+
+/* ==========================================
+   ESTILOS GENERALES
+   ========================================== */
+
+body {
+
+    font-family: var(--font-main);
+
+    color: var(--color-text);
+
+    background-color: var(--color-background);
+
+    font-size: 16px;
+
+}
+
+
+/* Contenedor general */
+
+main {
+
+    width: 100%;
+    overflow: hidden;
+
+}
+
+
+/* Encabezados de sección */
+
+.section-heading {
+
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: 0 auto 45px;
+
+}
+
+
+.section-heading h2 {
+
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+
+    font-weight: 800;
+
+    margin-bottom: 15px;
+
+    text-transform: uppercase;
+
+}
+
+
+.section-heading h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 65px;
+
+    height: 4px;
+
+    background-color: var(--color-primary);
+
+    margin: 15px auto 0;
+
+}
+
+
+.section-heading p {
+
+    color: #555555;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+}
+
+
+
+/* ==========================================
+   HEADER Y NAVEGACIÓN
+   ========================================== */
+
+#header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+
+    min-height: 85px;
+
+    padding: 12px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    background-color: var(--color-white);
+
+    border-bottom: 1px solid var(--color-border);
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+}
+
+
+/* Logotipo */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+
+}
+
+
+.logo img {
+
+    width: 150px;
+
+    height: auto;
+
+    object-fit: contain;
+
+}
+
+
+/* Navegación */
+
+#main-navigation {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+#main-navigation ul {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+#main-navigation a {
+
+    font-size: 0.95rem;
+
+    font-weight: 600;
+
+    color: var(--color-text);
+
+    transition: color var(--transition);
+
+}
+
+
+#main-navigation a:hover {
+
+    color: var(--color-primary);
+
+}
+
+
+/* Botón de llamada */
+
+.header-phone {
+
+    flex-shrink: 0;
+
+    padding: 11px 20px;
+
+    border: 2px solid var(--color-primary);
+
+    border-radius: 5px;
+
+    color: var(--color-primary);
+
+    font-weight: 700;
+
+    transition: var(--transition);
+
+}
+
+
+.header-phone:hover {
+
+    background-color: var(--color-primary);
+
+    color: var(--color-white);
+
+}
+
+
+/* Botón de WhatsApp */
+
+.header-whatsapp {
+
+    flex-shrink: 0;
+
+    padding: 11px 20px;
+
+    background-color: var(--color-primary);
+
+    color: var(--color-white);
+
+    border: 2px solid var(--color-primary);
+
+    border-radius: 5px;
+
+    font-weight: 700;
+
+    transition: var(--transition);
+
+}
+
+
+.header-whatsapp:hover {
+
+    background-color: var(--color-white);
+
+    color: var(--color-primary);
+
+}
+
+/* ==========================================
+   ACCIONES DE CONTACTO DEL HEADER
+   ========================================== */
+
+.header-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+
+}
+
+/* ==========================================
+   HEADER DINÁMICO (HIDE ON SCROLL)
+   ========================================== */
+
+#header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    /* Animación de entrada y salida */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Ocultar el header */
+#header.header-hidden {
+    transform: translateY(-100%);
+}
+
+
+
+
+/* ==========================================
+   HERO - PORTADA PRINCIPAL
+   ========================================== */
+
+#inicio {
+
+    position: relative;
+
+    min-height: 82vh;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    padding: 80px 10%;
+
+    overflow: hidden;
+
+    background-color: #222222;
+
+}
+
+
+/* Imagen de fondo */
+
+#inicio > img {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    z-index: 0;
+
+}
+
+
+/* Capa oscura sobre la imagen */
+
+#inicio::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.58);
+
+    z-index: 1;
+
+}
+
+
+/* Contenido del HERO */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 700px;
+
+    color: var(--color-white);
+
+}
+
+
+/* Título principal */
+
+.hero-content h1 {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    font-size: clamp(3rem, 7vw, 5.5rem);
+
+    font-weight: 900;
+
+    line-height: 1.05;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* Subtítulo del título */
+
+.hero-content h1 span {
+
+    font-size: clamp(1.3rem, 3vw, 2rem);
+
+    font-weight: 500;
+
+    letter-spacing: 0;
+
+    text-transform: none;
+
+    color: var(--color-white);
+
+}
+
+
+/* Descripción */
+
+.hero-content p {
+
+    max-width: 580px;
+
+    margin-top: 25px;
+
+    margin-bottom: 35px;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    color: var(--color-white);
+
+}
+
+
+/* Contenedor de botones */
+
+.hero-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+}
+
+
+
+
+
+/* ==========================================
+   SECCIÓN DE SERVICIOS
+   ========================================== */
+
+#servicios {
+
+    padding: var(--section-padding);
+
+    background-color: var(--color-background-alt);
+
+}
+
+
+/* Cuadrícula de servicios */
+
+.services-grid {
+
+    width: 100%;
+
+    max-width: var(--container-width);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+}
+
+
+/* Tarjeta individual */
+
+.service-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    background-color: var(--color-white);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow-card);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+
+}
+
+
+/* Imagen de cada servicio */
+
+.service-card img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+}
+
+
+/* Contenido de la tarjeta */
+
+.service-card h3 {
+
+    margin: 22px 22px 12px;
+
+    font-size: 1.25rem;
+
+    font-weight: 800;
+
+    color: var(--color-text);
+
+}
+
+
+.service-card p {
+
+    margin: 0 22px 20px;
+
+    color: #555555;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* Enlace de cada servicio */
+
+.service-link {
+
+    display: inline-block;
+
+    margin: auto 22px 22px;
+
+    padding: 10px 16px;
+
+    border: 1px solid var(--color-primary);
+
+    border-radius: 4px;
+
+    color: var(--color-primary);
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    transition: var(--transition);
+
+}
+
+
+.service-link:hover {
+
+    background-color: var(--color-primary);
+
+    color: var(--color-white);
+
+}
+
+
+/* Efecto al pasar el ratón */
+
+.service-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow-hover);
+
+}
+
+
+/* Efecto de zoom en imágenes */
+
+.service-card img {
+
+    transition: transform 0.4s ease;
+
+}
+
+
+.service-card:hover img {
+
+    transform: scale(1.04);
+
+}
+
+
+
+/* ==========================================
+   BOTONES DE INFORMACIÓN DE SERVICIOS
+   ========================================== */
+
+.service-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 10px 20px;
+
+    background-color: var(--color-primary);
+
+    color: var(--color-white);
+
+    border: 2px solid var(--color-primary);
+
+    border-radius: 5px;
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+
+}
+
+.service-link:hover {
+
+    background-color: transparent;
+
+    color: var(--color-primary);
+
+}
+
+
+/* ==========================================
+   VENTANA MODAL DE SERVICIOS
+   ========================================== */
+
+.service-modal {
+
+    width: min(90%, 750px);
+
+    max-width: 750px;
+
+    max-height: 90vh;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background-color: var(--color-white);
+
+    color: var(--color-text);
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+
+    overflow: auto;
+
+    margin: auto;
+
+}
+
+
+/* Fondo oscuro detrás del modal */
+
+.service-modal::backdrop {
+
+    background-color: rgba(0, 0, 0, 0.75);
+
+    backdrop-filter: blur(3px);
+
+}
+
+
+/* Contenedor interior */
+
+.modal-content {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* Imagen del servicio */
+
+.modal-content > img {
+
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+}
+
+
+/* Información */
+
+.modal-information {
+
+    padding: 30px;
+
+}
+
+
+.modal-information h2 {
+
+    font-size: clamp(1.5rem, 4vw, 2rem);
+
+    margin-bottom: 15px;
+
+    text-transform: uppercase;
+
+}
+
+
+.modal-information h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 55px;
+
+    height: 4px;
+
+    background-color: var(--color-primary);
+
+    margin-top: 12px;
+
+}
+
+
+.modal-information p {
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    color: #555555;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* Botón de cierre */
+
+.modal-close {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 12px;
+
+    z-index: 2;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    color: white;
+
+    font-size: 1.8rem;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: var(--transition);
+
+}
+
+
+.modal-close:hover {
+
+    background-color: var(--color-primary);
+
+    transform: rotate(90deg);
+
+}
+
+
+/* Botón para solicitar información */
+
+.modal-appointment {
+
+    text-decoration: none;
+
+}
+
+
+/* Accesibilidad mediante teclado */
+
+.service-link:focus-visible,
+.modal-close:focus-visible,
+.modal-appointment:focus-visible {
+
+    outline: 3px solid var(--color-primary);
+
+    outline-offset: 4px;
+
+}
+
+
+/* ==========================================
+   DISEÑO RESPONSIVE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .service-modal {
+
+        width: 92%;
+
+        max-height: 85vh;
+
+    }
+
+    .modal-content > img {
+
+        height: 200px;
+
+    }
+
+    .modal-information {
+
+        padding: 22px;
+
+    }
+
+}
+
+
+
+/* ==========================================
+   SECCIÓN DE OPINIONES
+   ========================================== */
+
+
+/* ==========================================
+   7. OPINIONES DE LOS CLIENTES
+   ========================================== */
+
+#opiniones {
+
+    padding: var(--section-padding);
+
+    background-color: var(--color-background);
+
+}
+
+
+/* Contenedor del enlace */
+
+.reviews-link {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    max-width: var(--container-width);
+
+    margin: 0 auto;
+
+}
+
+
+/* Botón para consultar opiniones */
+
+.reviews-link a {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 50px;
+
+    padding: 14px 35px;
+
+    background-color: var(--color-primary);
+
+    color: var(--color-white);
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    border: 2px solid var(--color-primary);
+
+    transition: var(--transition);
+
+}
+
+
+/* Efecto hover */
+
+.reviews-link a:hover {
+
+    background-color: transparent;
+
+    color: var(--color-primary);
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow-card);
+
+}
+
+
+/* Efecto al pulsar */
+
+.reviews-link a:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* Accesibilidad: navegación mediante teclado */
+
+.reviews-link a:focus-visible {
+
+    outline: 3px solid var(--color-text);
+
+    outline-offset: 4px;
+
+}
+
+
+
+/* ==========================================
+   SECCIÓN DE SOLICITUD DE CITA
+   ========================================== */
+
+
+
+/* ==========================================
+   SECCIÓN DE HORARIOS Y UBICACIÓN
+   ========================================== */
+
+#contacto {
+
+    padding: var(--section-padding);
+
+    background-color: var(--color-background-alt);
+
+}
+
+
+/* ==========================================
+   CONTENEDOR PRINCIPAL
+   ========================================== */
+
+.contact-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 30px;
+
+    max-width: var(--container-width);
+
+    margin: 0 auto;
+
+    padding: 15px;
+
+}
+
+
+/* ==========================================
+   TARJETAS DE CONTACTO Y HORARIOS
+   ========================================== */
+
+.contact-information,
+.business-hours {
+
+    padding: 35px;
+
+    background-color: var(--color-white);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 10px;
+
+    box-shadow: var(--shadow-card);
+
+}
+
+
+/* Títulos de las tarjetas */
+
+.contact-information h3,
+.business-hours h3 {
+
+    font-size: 1.4rem;
+
+    font-weight: 800;
+
+    margin-bottom: 30px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 2px solid var(--color-primary);
+
+}
+
+
+/* ==========================================
+   INFORMACIÓN DE CONTACTO
+   ========================================== */
+
+.contact-information {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+}
+
+
+.contact-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+/* Títulos de cada dato de contacto */
+
+.contact-item h4 {
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    color: var(--color-text);
+
+}
+
+
+/* Dirección */
+
+.contact-item address {
+
+    font-style: normal;
+
+    line-height: 1.6;
+
+}
+
+
+.contact-item address p {
+
+    color: #555555;
+
+    line-height: 1.6;
+
+}
+
+
+/* Enlaces de contacto */
+
+.contact-item a {
+
+    width: fit-content;
+
+    color: var(--color-text);
+
+    font-size: 0.95rem;
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+}
+
+
+.contact-item a:hover {
+
+    color: var(--color-primary);
+
+}
+
+
+/* Accesibilidad de los enlaces */
+
+.contact-item a:focus-visible {
+
+    outline: 2px solid var(--color-primary);
+
+    outline-offset: 4px;
+
+    border-radius: 2px;
+
+}
+
+
+/* ==========================================
+   HORARIOS DE ATENCIÓN
+   ========================================== */
+
+.business-hours ul {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0;
+
+    list-style: none;
+
+}
+
+
+.business-hours li {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid var(--color-border);
+
+    font-size: 0.9rem;
+
+}
+
+
+/* Día de la semana */
+
+.business-hours li span:first-child {
+
+    font-weight: 700;
+
+    color: var(--color-text);
+
+    flex-shrink: 0;
+
+}
+
+
+/* Horario */
+
+.business-hours li span:last-child {
+
+    color: #555555;
+
+    text-align: right;
+
+    line-height: 1.5;
+
+}
+
+
+/* Último elemento de la lista */
+
+.business-hours li:last-child {
+
+    border-bottom: none;
+
+}
+
+
+/* ==========================================
+   SOLICITUD DE CITAS
+   ========================================== */
+
+#citas {
+    padding: var(--section-padding);
+    background-color: var(--color-background-alt);
+}
+
+.appointment-services {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.appointment-service {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+
+    padding: 30px;
+
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+}
+
+.appointment-service:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.appointment-service h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.appointment-service p {
+    color: #555555;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.service-duration {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 12px;
+
+    background-color: var(--color-background-alt);
+    border-radius: 5px;
+
+    color: var(--color-text);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.appointment-service .btn-primary {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 48px;
+
+    margin-top: auto;
+    padding: 12px 18px;
+
+    background-color: #C00000;
+    color: var(--color-white);
+
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+
+    border: 2px solid #C00000;
+    border-radius: 6px;
+
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.appointment-service .btn-primary:hover {
+    background-color: transparent;
+    color: #C00000;
+    transform: translateY(-2px);
+}
+
+.appointment-service .btn-primary:focus-visible {
+    outline: 3px solid var(--color-text);
+    outline-offset: 4px;
+}
+
+
+
+
+/* ==========================================
+   FOOTER Y NAVEGACIÓN
+   ========================================== */
+
+
+/* ==========================================
+   FOOTER - PIE DE PÁGINA
+   ========================================== */
+
+#footer {
+
+    width: 100%;
+
+    background-color: #222222;
+
+    color: var(--color-white);
+
+}
+
+
+/* ==========================================
+   CONTENIDO PRINCIPAL DEL FOOTER
+   ========================================== */
+
+.footer-content {
+
+    width: 100%;
+
+    max-width: var(--container-width);
+
+    margin: 0 auto;
+
+    padding: 65px 20px;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1.2fr 0.8fr;
+
+    gap: 45px;
+
+}
+
+
+/* Títulos de los bloques */
+
+.footer-content h3 {
+
+    font-size: 1.1rem;
+
+    font-weight: 700;
+
+    margin-bottom: 22px;
+
+    color: var(--color-white);
+
+}
+
+
+/* ==========================================
+   IDENTIDAD DEL TALLER
+   ========================================== */
+
+.footer-brand img {
+
+    width: 150px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+
+}
+
+
+.footer-brand h3 {
+
+    font-size: 1.25rem;
+
+    margin-bottom: 12px;
+
+}
+
+
+.footer-brand p {
+
+    max-width: 280px;
+
+    color: #C9C9C9;
+
+    line-height: 1.7;
+
+    font-size: 0.95rem;
+
+}
+
+
+/* ==========================================
+   NAVEGACIÓN Y REDES SOCIALES
+   ========================================== */
+
+.footer-navigation ul,
+.footer-social ul {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+
+}
+
+
+.footer-navigation a,
+.footer-social a {
+
+    color: #C9C9C9;
+
+    font-size: 0.95rem;
+
+    transition: color var(--transition);
+
+}
+
+
+.footer-navigation a:hover,
+.footer-social a:hover {
+
+    color: var(--color-primary);
+
+}
+
+
+/* ==========================================
+   INFORMACIÓN DE CONTACTO
+   ========================================== */
+
+.footer-contact {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+}
+
+
+.footer-contact h3 {
+
+    margin-bottom: 9px;
+
+}
+
+
+.footer-contact p {
+
+    color: #C9C9C9;
+
+    font-size: 0.95rem;
+
+    line-height: 1.6;
+
+}
+
+
+.footer-contact p a {
+
+    color: #C9C9C9;
+
+    transition: color var(--transition);
+
+}
+
+
+.footer-contact p a:hover {
+
+    color: var(--color-primary);
+
+}
+
+
+/* Botón de WhatsApp */
+
+.footer-whatsapp {
+
+    display: inline-block;
+
+    margin-top: 8px;
+
+    padding: 10px 16px;
+
+    background-color: var(--color-primary);
+
+    color: var(--color-white);
+
+    border: 2px solid var(--color-primary);
+
+    border-radius: 5px;
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    transition: var(--transition);
+
+}
+
+
+.footer-whatsapp:hover {
+
+    background-color: transparent;
+
+    color: var(--color-white);
+
+}
+
+
+/* ==========================================
+   ENLACES LEGALES
+   ========================================== */
+
+.footer-legal {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    padding: 25px 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+}
+
+
+.footer-legal a {
+
+    color: #C9C9C9;
+
+    font-size: 0.85rem;
+
+    transition: color var(--transition);
+
+}
+
+
+.footer-legal a:hover {
+
+    color: var(--color-primary);
+
+}
+
+
+/* ==========================================
+   COPYRIGHT
+   ========================================== */
+
+.footer-copyright {
+
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: #191919;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+}
+
+
+.footer-copyright p {
+
+    color: #AAAAAA;
+
+    font-size: 0.85rem;
+
+    line-height: 1.6;
+
+}
+
+
+
+
+/* ==========================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================== */
+
+/* Estado inicial: elementos ocultos */
+
+.js .reveal {
+
+    opacity: 0;
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+
+    will-change: opacity, transform;
+
+}
+
+
+/* Animación Fade Up */
+
+.js .reveal-up {
+
+    transform: translateY(45px);
+
+}
+
+
+/* Animación Fade Left */
+
+.js .reveal-left {
+
+    transform: translateX(-45px);
+
+}
+
+
+/* Animación Fade Right */
+
+.js .reveal-right {
+
+    transform: translateX(45px);
+
+}
+
+
+/* Animación Scale */
+
+.js .reveal-scale {
+
+    transform: scale(0.92);
+
+}
+
+
+/* Estado visible */
+
+.js .reveal.visible {
+
+    opacity: 1;
+
+    transform: translate(0, 0) scale(1);
+
+}
+
+
+/* Retrasos para animaciones escalonadas */
+
+.js .delay-1 {
+    transition-delay: 0.1s;
+}
+
+.js .delay-2 {
+    transition-delay: 0.2s;
+}
+
+.js .delay-3 {
+    transition-delay: 0.3s;
+}
+
+.js .delay-4 {
+    transition-delay: 0.4s;
+}
+
+
+/* Accesibilidad */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .js .reveal {
+
+        opacity: 1;
+
+        transform: none;
+
+        transition: none;
+
+    }
+
+}
+
+
+
+
+==================== ARCHIVO: js\contact.js ====================
+
+
+==================== ARCHIVO: js\main.js ====================
+
+
+/* ==========================================
+   FOOTER - AÑO AUTOMÁTICO
+   ========================================== */
+
+const currentYear = document.getElementById("current-year");
+
+if (currentYear) {
+
+    currentYear.textContent = new Date().getFullYear();
+
+}
+
+
+
+
+// ==========================================
+// HEADER DINÁMICO (HIDE ON SCROLL)
+// ==========================================
+
+const header = document.getElementById("header");
+
+// Guardamos la última posición del scroll
+let lastScrollY = window.scrollY;
+
+// Detectamos el movimiento del usuario
+window.addEventListener("scroll", () => {
+
+    const currentScrollY = window.scrollY;
+
+    // Si estamos en la parte superior, mostramos el header
+    if (currentScrollY <= 80) {
+
+        header.classList.remove("header-hidden");
+
+    }
+
+    // Si bajamos, ocultamos el header
+    else if (currentScrollY > lastScrollY) {
+
+        header.classList.add("header-hidden");
+
+    }
+
+    // Si subimos, mostramos el header
+    else if (currentScrollY < lastScrollY) {
+
+        header.classList.remove("header-hidden");
+
+    }
+
+    // Actualizamos la última posición registrada
+    lastScrollY = currentScrollY;
+
+}, { passive: true });
+
+
+
+
+/* ==========================================
+   MODAL DE SERVICIOS
+   ========================================== */
+
+// Obtener elementos HTML
+
+const serviceModal = document.getElementById("service-modal");
+
+const modalImage = document.getElementById("modal-image");
+
+const modalTitle = document.getElementById("modal-title");
+
+const modalDescription = document.getElementById("modal-description");
+
+const modalClose = document.querySelector(".modal-close");
+
+
+// ==========================================
+// INFORMACIÓN DE LOS SERVICIOS
+// ==========================================
+
+const servicesData = {
+
+    mantenimiento: {
+
+        title: "Mantenimiento general",
+
+        image: "assets/images/image1.webp",
+
+        description:
+            "Realizamos el mantenimiento periódico de tu vehículo para conservar su rendimiento, fiabilidad y seguridad. Revisamos los principales componentes mecánicos, comprobamos los niveles de líquidos y sustituimos los elementos necesarios según las necesidades de cada vehículo."
+
+    },
+
+
+    motores: {
+
+        title: "Reparación de motores",
+
+        image: "assets/images/image2.webp",
+
+        description:
+            "Diagnosticamos y reparamos averías relacionadas con el motor. Analizamos los síntomas del vehículo para identificar posibles problemas y determinar las intervenciones necesarias para recuperar su correcto funcionamiento."
+
+    },
+
+
+    electricidad: {
+
+        title: "Baterías y electricidad",
+
+        image: "assets/images/image3.webp",
+
+        description:
+            "Comprobamos el estado de la batería y revisamos los principales componentes del sistema eléctrico. También realizamos sustituciones y comprobaciones para solucionar problemas de arranque y fallos eléctricos."
+
+    },
+
+
+    chapa: {
+
+        title: "Chapa y pintura",
+
+        image: "assets/images/image4.webp",
+
+        description:
+            "Realizamos trabajos de reparación de carrocería para solucionar golpes, arañazos y otros daños exteriores. También llevamos a cabo trabajos de pintura para recuperar el aspecto original del vehículo."
+
+    },
+
+
+    frenos: {
+
+        title: "Sistemas de frenado",
+
+        image: "assets/images/image5.webp",
+
+        description:
+            "Revisamos los principales componentes del sistema de frenado, incluyendo discos, pastillas y otros elementos relacionados. El objetivo es detectar desgastes o anomalías que puedan comprometer la seguridad del vehículo."
+
+    },
+
+
+    diagnosis: {
+
+        title: "Diagnosis electrónica",
+
+        image: "assets/images/image6.webp",
+
+        description:
+            "Utilizamos equipos de diagnosis electrónica para detectar y analizar posibles averías en los sistemas electrónicos del vehículo. Esta comprobación permite identificar códigos de error y orientar las reparaciones necesarias."
+
+    }
+
+};
+
+
+// ==========================================
+// ABRIR MODAL
+// ==========================================
+
+// Seleccionar todos los botones de servicios
+
+const serviceButtons = document.querySelectorAll(".service-link");
+
+
+serviceButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        // Obtener el identificador del servicio
+
+        const serviceId = button.dataset.service;
+
+        // Buscar los datos correspondientes
+
+        const service = servicesData[serviceId];
+
+        // Comprobar que existe el servicio
+
+        if (!service) return;
+
+        // Actualizar el contenido del modal
+
+        modalImage.src = service.image;
+
+        modalImage.alt = service.title;
+
+        modalTitle.textContent = service.title;
+
+        modalDescription.textContent = service.description;
+
+        // Mostrar la ventana modal
+
+        serviceModal.showModal();
+
+    });
+
+});
+
+
+// ==========================================
+// CERRAR MODAL
+// ==========================================
+
+// Cerrar mediante el botón X
+
+modalClose.addEventListener("click", () => {
+
+    serviceModal.close();
+
+});
+
+
+// Cerrar al pulsar Escape
+
+serviceModal.addEventListener("click", (event) => {
+
+    if (event.target === serviceModal) {
+
+        serviceModal.close();
+
+    }
+
+});
+
+
+// Cerrar después de solicitar información
+
+const appointmentButton = document.querySelector(".modal-appointment");
+
+appointmentButton.addEventListener("click", () => {
+
+    serviceModal.close();
+
+});
+
+
+
+
+
+/* ==========================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================== */
+
+// Indicamos que JavaScript está disponible
+document.documentElement.classList.add("js");
+
+// Seleccionamos todos los elementos animables
+const revealElements = document.querySelectorAll(".reveal");
+
+    // Comprobamos la disponibilidad de Intersection Observer
+    if ("IntersectionObserver" in window) {
+
+        const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("visible");
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        }
+    );
+
+    revealElements.forEach(element => {
+        revealObserver.observe(element);
+    });
+
+    } else {
+
+        // Fallback para navegadores sin soporte
+        revealElements.forEach(element => {
+
+            element.classList.add("visible");
+
+        });
+
+}
+
+revealElements.forEach(element => {
+    console.log(
+        element.className,
+        element.getBoundingClientRect().top,
+        window.innerHeight
+    );
+});
+
+==================== ARCHIVO: js\navigation.js ====================
+
+
+==================== ARCHIVO: pages\aviso-legal.html ====================
+
+
+==================== ARCHIVO: pages\cookies.html ====================
+
+
+==================== ARCHIVO: pages\privacidad.html ====================
+
+
+==================== ARCHIVO: index.html ====================
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- ==========================================
+         1. CONFIGURACIÓN BÁSICA DEL DOCUMENTO
+         ========================================== -->
+
+    <!-- Codificación de caracteres -->
+    <meta charset="UTF-8">
+
+    <!-- Adaptación a dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Compatibilidad con navegadores -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- TODO: Sustituir por el nombre comercial y la localidad -->
+    <title>TEXACO | Taller Mecánico en Pobla de Vallbona</title>
+
+    <!-- SEO: descripción para los resultados de búsqueda -->
+    <!-- TODO: Personalizar con la ubicación y los servicios reales -->
+    <meta
+        name="description"
+        content="Taller mecánico en Pobla de Vallbona. Especialistas en mantenimiento, reparación y diagnosis de vehículos. Contacta con nosotros y solicita tu cita."
+    >
+
+    <!-- Autor y directrices de indexación -->
+    <meta name="Alejandro" content="TEXACO">
+    <meta name="taller" content="index, follow">
+
+    <!-- Color del navegador en dispositivos compatibles -->
+    <meta name="theme-color" content="##ff0000">
+
+
+    <!-- ==========================================
+         2. SEO TÉCNICO Y URL CANÓNICA
+         ========================================== -->
+
+    <!-- TODO: Sustituir por la URL definitiva de GitHub Pages
+         o por el dominio propio cuando esté configurado 
+
+    <link
+        rel="canonical"
+        href="https://www.tudominio.es/"
+    >     -->
+
+
+    <!-- ==========================================
+         3. IDENTIDAD VISUAL Y RECURSOS
+         ========================================== -->
+
+    <!-- Favicon del negocio -->
+    <link
+        rel="icon"
+        href="assets/images/favicon.svg"
+    >
+
+
+    <!-- ==========================================
+         4. OPEN GRAPH (REDES SOCIALES)
+         ========================================== -->
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Nombre del negocio -->
+    <meta
+        property="og:site_name"
+        content="TEXACO"
+    >
+
+    <meta
+        property="og:title"
+        content="TEXACO | Taller Mecánico en Pobla de Vallbona"
+    >
+
+    <meta
+        property="og:description"
+        content="Tu taller mecánico de confianza en Municipio. Mantenimiento, reparación y atención personalizada."
+    >
+
+    <!-- TODO: Utilizar URL absoluta de la imagen y sustituir el dominio -->
+    <meta
+        property="og:image"
+        content="assets/images/hero.webp"
+    >
+
+    <!-- TODO: Sustituir por la URL definitiva 
+     
+        <meta
+        property="og:url"
+        content="https://www.tudominio.es/"
+    >       -->
+
+
+    <!-- ==========================================
+         5. TWITTER / X CARDS
+         ========================================== 
+         
+        <meta name="twitter:card" content="summary_large_image">
+
+    <meta
+        name="twitter:title"
+        content="Nombre del Taller | Taller Mecánico en Municipio"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Mantenimiento y reparación de vehículos en Municipio. Contacta con nosotros."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://www.tudominio.es/assets/images/hero.webp"
+    >        -->
+
+
+    <!-- ==========================================
+         6. OPTIMIZACIÓN DE CARGA
+         ========================================== -->
+
+    <!-- Precarga de la imagen principal (LCP) -->
+    <link
+        rel="preload"
+        as="image"
+        href="assets/images/hero.webp"
+    >
+
+
+    <!-- ==========================================
+         7. HOJAS DE ESTILO CSS
+         ========================================== -->
+
+    <!-- Normalización de estilos del navegador -->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- Estilos generales de la aplicación -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Componentes reutilizables -->
+    <link rel="stylesheet" href="css/components.css">
+
+    <!-- Adaptación responsive -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <!-- ==========================================
+         8. ARCHIVOS JAVASCRIPT
+         ========================================== -->
+
+    <!-- Lógica principal de la aplicación -->
+    <script src="js/main.js" defer></script>
+
+    <!-- Navegación y menú responsive -->
+    <script src="js/navigation.js" defer></script>
+
+    <!-- Gestión del formulario de contacto y citas -->
+    <script src="js/contact.js" defer></script>
+
+    <!-- Gestión de opiniones de clientes -->
+    <script src="js/reviews.js" defer></script>
+
+</head>
+
+
+<body>
+
+    <!-- ==========================================
+         3. CABECERA Y NAVEGACIÓN
+         ========================================== -->
+
+    <header id="header">
+
+        <!-- Identidad visual del negocio -->
+        <a href="#inicio" class="logo" aria-label="Ir al inicio">
+            <!-- Sustituir por el logotipo real -->
+            <img
+                src="assets/images/logo.svg"
+                alt="Logotipo del taller"
+            >
+        </a>
+
+        <!-- Navegación principal -->
+        <nav id="main-navigation" aria-label="Navegación principal">
+
+            <!-- TODO: Implementar menú responsive y menú hamburguesa -->
+
+            <ul>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#opiniones">Opiniones</a></li>
+                <li><a href="#citas">Solicitar cita</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+        </nav>
+
+        <!-- Acciones de contacto -->
+        <div class="header-actions">
+
+            <!-- TODO: Configurar el teléfono real -->
+            <a href="tel:+34000000000" class="header-phone">
+                Llamar ahora
+            </a>
+
+            <!-- TODO: Configurar el número real de WhatsApp -->
+            <a
+                href="https://wa.me/34000000000"
+                class="header-whatsapp"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contactar con el taller por WhatsApp"
+            >
+                WhatsApp
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ==========================================
+             4. PORTADA PRINCIPAL (HERO)
+             ========================================== -->
+
+        <section id="inicio" aria-labelledby="hero-title">
+
+            <!-- TODO: Añadir fotografía profesional del taller o de un vehículo -->
+            <img
+                src="assets/images/hero.webp"
+                alt="Vehículo en las instalaciones del taller"
+                fetchpriority="high"
+                decoding="async"
+            >
+
+            <div class="hero-content">
+
+                <!-- TODO: Sustituir por el nombre comercial -->
+                <h1 id="hero-title">
+                    TEXACO
+                    <span>Taller mecánico de confianza</span>
+                </h1>
+
+                <!-- TODO: Crear un eslogan que represente al negocio -->
+                <p>
+                    Servicio de mecánica y mantenimiento de vehículos
+                    en La Pobla de Vallbona.
+                    Trabajamos para ofrecerte soluciones cercanas y de confianza.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+        <!-- ==========================================
+             6. SERVICIOS DEL TALLER
+             ========================================== -->
+
+        <section id="servicios" aria-labelledby="services-title">
+
+            <div class="section-heading reveal reveal-up">
+
+                <h2 id="services-title">
+                    Nuestros servicios
+                </h2>
+
+                <p>
+                    Soluciones profesionales para el mantenimiento
+                    y reparación de tu vehículo.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+                <!-- Servicio 1 -->
+                <article class="service-card reveal reveal-up delay-1">
+
+                    <img
+                        src="assets/images/image1.webp"
+                        alt="Trabajo de mecánica general en un vehículo"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <h3>Mantenimiento general</h3>
+
+                    <p>
+                        Mantenimiento periódico y reparación de los
+                        principales componentes mecánicos de tu vehículo.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="service-link"
+                        data-service="mantenimiento"
+                    >
+                        Más información
+                    </button>
+
+                </article>
+
+
+                <!-- Servicio 2 -->
+                <article class="service-card reveal reveal-up delay-2">
+
+                    <img
+                        src="assets/images/image2.webp"
+                        alt="Reparación de motor de un vehículo"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <h3>Reparación de motores</h3>
+
+                    <p>
+                        Diagnóstico de averías y trabajos de reparación
+                        relacionados con el motor.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="service-link"
+                        data-service="motores"
+                    >
+                        Más información
+                    </button>
+
+                </article>
+
+
+                <!-- Servicio 3 -->
+                <article class="service-card reveal reveal-up delay-3">
+
+                    <img
+                        src="assets/images/image3.webp"
+                        alt="Revisión del sistema eléctrico de un vehículo"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <h3>Baterías y electricidad</h3>
+
+                    <p>
+                        Revisión del sistema eléctrico, comprobación
+                        de baterías y sustitución cuando sea necesario.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="service-link"
+                        data-service="electricidad"
+                    >
+                        Más información
+                    </button>
+
+                </article>
+
+
+                <!-- Servicio 4 -->
+                <article class="service-card reveal reveal-up delay-1">
+
+                    <img
+                        src="assets/images/image4.webp"
+                        alt="Trabajo de reparación de carrocería"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <h3>Chapa y pintura</h3>
+
+                    <p>
+                        Reparación de daños en la carrocería
+                        y trabajos de pintura.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="service-link"
+                        data-service="chapa"
+                    >
+                        Más información
+                    </button>
+
+                </article>
+
+
+                <!-- Servicio 5 -->
+                <article class="service-card reveal reveal-up delay-2">
+
+                    <img
+                        src="assets/images/image5.webp"
+                        alt="Revisión del sistema de frenado"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <h3>Sistemas de frenado</h3>
+
+                    <p>
+                        Revisión y mantenimiento de discos, pastillas
+                        y componentes del sistema de frenado.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="service-link"
+                        data-service="frenos"
+                    >
+                        Más información
+                    </button>
+
+                </article>
+
+
+                <!-- Servicio 6 -->
+                <article class="service-card reveal reveal-up delay-3">
+
+                    <img
+                        src="assets/images/image6.webp"
+                        alt="Diagnosis electrónica de un vehículo"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <h3>Diagnosis electrónica</h3>
+
+                    <p>
+                        Detección y análisis de averías mediante
+                        equipos de diagnosis electrónica.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="service-link"
+                        data-service="diagnosis"
+                    >
+                        Más información
+                    </button>
+
+                </article>
+
+            </div>
+
+
+            <!-- ==========================================
+                MODAL REUTILIZABLE DE SERVICIOS
+                ========================================== -->
+
+            <dialog id="service-modal" class="service-modal">
+
+                <div class="modal-content">
+
+                    <!-- Botón para cerrar -->
+                    <button
+                        type="button"
+                        class="modal-close"
+                        aria-label="Cerrar ventana"
+                    >
+                        &times;
+                    </button>
+
+                    <!-- Imagen del servicio -->
+                    <img
+                        id="modal-image"
+                        src=""
+                        alt=""
+                    >
+
+                    <!-- Información del servicio -->
+                    <div class="modal-information">
+
+                        <h2 id="modal-title"></h2>
+
+                        <p id="modal-description"></p>
+
+                        <!-- Enlace para solicitar información -->
+                        <a
+                            href="#citas"
+                            class="btn-primary modal-appointment"
+                        >
+                            Solicitar información
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </dialog>
+
+
+            <!-- TODO: Confirmar con el propietario qué servicios ofrece realmente -->
+
+        </section>
+
+
+        <!-- ==========================================
+            9. RESERVA DE CITAS
+            ========================================== -->
+
+        <section id="citas" aria-labelledby="appointment-title">
+
+            <div class="section-heading">
+
+                <h2 id="appointment-title">
+                    Reserva tu cita
+                </h2>
+
+                <p>
+                    Selecciona el servicio que necesitas y
+                    encuentra el momento que mejor te convenga.
+                </p>
+
+            </div>
+
+            <div class="appointment-services">
+
+                <!-- SERVICIO 1 -->
+
+                <article class="appointment-service">
+
+                    <h3>Revisión de vehículo</h3>
+
+                    <p>
+                        Inspección visual rápida del vehículo y su condición.
+                        Incluye revisión de discos de freno y detección
+                        de sonidos anormales del motor.
+                    </p>
+
+                    <span class="service-duration">
+                        10 minutos
+                    </span>
+
+                    <a
+                        href="https://cal.com/alejandro-vasile-9wdxys/10min"
+                        class="btn-primary js-booking-trigger"
+                        data-booking-url="alejandro-vasile-9wdxys/10min"
+                        target="_blank"
+                    >
+                        Reservar revisión
+                    </a>
+
+                </article>
+
+
+                <!-- SERVICIO 2 -->
+
+                <article class="appointment-service">
+
+                    <h3>Recambio de faros</h3>
+
+                    <p>
+                        Sustitución de faros por avería o daños
+                        ocasionados por golpes.
+                    </p>
+
+                    <span class="service-duration">
+                        1 hora
+                    </span>
+
+                    <a
+                        href="https://cal.com/alejandro-vasile-9wdxys/recambio-faros"
+                        class="btn-primary js-booking-trigger"
+                        data-booking-url="alejandro-vasile-9wdxys/recambio-faros"
+                        target="_blank"
+                    >
+                        Reservar recambio
+                    </a>
+
+                </article>
+
+
+                <!-- SERVICIO 3 -->
+
+                <article class="appointment-service">
+
+                    <h3>Revisión completa del vehículo</h3>
+
+                    <p>
+                        Revisión exhaustiva de 20 puntos
+                        para comprobar el estado general del vehículo.
+                    </p>
+
+                    <span class="service-duration">
+                        1 hora
+                    </span>
+
+                    <a
+                        href="https://cal.com/alejandro-vasile-9wdxys/30min"
+                        class="btn-primary js-booking-trigger"
+                        data-booking-url="alejandro-vasile-9wdxys/30min"
+                        target="_blank"
+                    >
+                        Reservar revisión completa
+                    </a>
+
+                </article>
+
+            </div>
+
+
+        </section>
+
+
+
+        
+        <!-- ==========================================
+            10. HORARIOS Y UBICACIÓN
+            ========================================== -->
+
+        <section id="contacto" aria-labelledby="contact-title">
+
+            <div class="section-heading">
+
+                <h2 id="contact-title">
+                    Visítanos
+                </h2>
+
+                <p>
+                    Estamos aquí para ayudarte.
+                    Contacta con nosotros o ven a visitarnos.
+                </p>
+
+            </div>
+
+
+            <!-- Información de contacto y horarios -->
+            <div class="contact-container">
+
+                <!-- Información de contacto -->
+                <div class="contact-information reveal reveal-left">
+
+                    <h3>Información de contacto</h3>
+
+                    <div class="contact-item">
+
+                        <h4>Dirección</h4>
+
+                        <!-- TODO: Sustituir por la dirección real -->
+                        <address>
+                            <p>
+                                Calle y número, Código Postal
+                                Municipio, Provincia
+                            </p>
+                        </address>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <h4>Teléfono</h4>
+
+                        <!-- TODO: Sustituir por el teléfono real -->
+                        <a href="tel:+34000000000">
+                            +34 000 000 000
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <h4>Correo electrónico</h4>
+
+                        <!-- TODO: Sustituir por el correo real -->
+                        <a href="mailto:info@taller.com">
+                            info@taller.com
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <h4>WhatsApp</h4>
+
+                        <!-- TODO: Sustituir por el número real -->
+                        <a
+                            href="https://wa.me/34000000000"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Contactar por WhatsApp
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Horarios de atención -->
+                <div class="business-hours reveal reveal-right">
+
+                    <h3>Nuestro horario</h3>
+
+                    <!-- TODO: Confirmar los horarios con el propietario -->
+
+                    <ul>
+
+                        <li>
+                            <span>Lunes</span>
+                            <span>09:00 - 14:00 / 16:00 - 19:00</span>
+                        </li>
+
+                        <li>
+                            <span>Martes</span>
+                            <span>09:00 - 14:00 / 16:00 - 19:00</span>
+                        </li>
+
+                        <li>
+                            <span>Miércoles</span>
+                            <span>09:00 - 14:00 / 16:00 - 19:00</span>
+                        </li>
+
+                        <li>
+                            <span>Jueves</span>
+                            <span>09:00 - 14:00 / 16:00 - 19:00</span>
+                        </li>
+
+                        <li>
+                            <span>Viernes</span>
+                            <span>09:00 - 14:00 / 16:00 - 19:00</span>
+                        </li>
+
+                        <li>
+                            <span>Sábado</span>
+                            <span>09:00 - 13:00</span>
+                        </li>
+
+                        <li>
+                            <span>Domingo</span>
+                            <span>Cerrado</span>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+            
+            <div class="contact-container">
+                <!-- Ubicación del establecimiento -->
+                <div class="contact-information reveal reveal-left">
+
+                    <h3>Ubicación en el mapa</h3>
+                    <!--
+                        TODO:
+                        Añadir una imagen de la ubicación o fachada
+                        del establecimiento si se considera necesario.
+                    -->
+
+                    <!-- TODO: Sustituir por el enlace real de Google Maps -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12298.77920481819!2d-0.542580124203534!3d39.58902827396617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd605f93a66ef8c7%3A0x4781a6ddd90667f0!2sTaller%20TEXACO%20LA%20POBLA!5e0!3m2!1sen!2ses!4v1795507388545!5m2!1sen!2ses" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+
+                </div >
+
+                <div class="business-hours reveal reveal-right">
+
+                    <h3>Opiniones de nuestros clientes</h3>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    
+    <!-- ==========================================
+        12. PIE DE PÁGINA
+        ========================================== -->
+
+    <footer id="footer">
+
+        <div class="footer-content">
+
+            <!-- IDENTIDAD DEL TALLER -->
+            <div class="footer-brand">
+
+                <a href="#inicio" aria-label="Volver al inicio">
+                    <img
+                        src="assets/images/logo.svg"
+                        alt="Logotipo del taller"
+                        loading="lazy"
+                    >
+                </a>
+
+                <h3>Nombre del Taller</h3>
+
+                <p>
+                    Tu taller de confianza. Profesionalidad,
+                    experiencia y compromiso con cada vehículo.
+                </p>
+
+            </div>
+
+
+            <!-- NAVEGACIÓN -->
+            <nav class="footer-navigation" aria-label="Navegación del pie de página">
+
+                <h3>Enlaces rápidos</h3>
+
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Sobre nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#opiniones">Opiniones</a></li>
+                    <li><a href="#citas">Solicitar cita</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+
+            </nav>
+
+
+            <!-- CONTACTO -->
+            <div class="footer-contact">
+
+                <h3>Contacto</h3>
+
+                <!-- TODO: Sustituir por los datos reales -->
+
+                <p>
+                    <a href="tel:+34000000000">
+                        +34 000 000 000
+                    </a>
+                </p>
+
+                <p>
+                    <a href="mailto:info@taller.com">
+                        info@taller.com
+                    </a>
+                </p>
+
+                <p>
+                    Dirección del taller
+                </p>
+
+                <!-- TODO: Sustituir por el número real de WhatsApp -->
+                <a
+                    href="https://wa.me/34000000000"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="footer-whatsapp"
+                >
+                    Contactar por WhatsApp
+                </a>
+
+            </div>
+
+
+            <!-- REDES SOCIALES -->
+            <div class="footer-social">
+
+                <h3>Síguenos</h3>
+
+                <!-- TODO: Añadir enlaces reales de las redes sociales -->
+
+                <ul>
+
+                    <li>
+                        <a
+                            href="#"
+                            aria-label="Instagram"
+                        >
+                            Instagram
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="#"
+                            aria-label="Facebook"
+                        >
+                            Facebook
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- ENLACES LEGALES -->
+        <div class="footer-legal">
+
+            <a href="pages/aviso-legal.html">
+                Aviso legal
+            </a>
+
+            <a href="pages/privacidad.html">
+                Política de privacidad
+            </a>
+
+            <a href="pages/cookies.html">
+                Política de cookies
+            </a>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+        <div class="footer-copyright">
+
+            <p>
+                &copy; <span id="current-year">2026</span>
+                Nombre del Taller.
+                Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

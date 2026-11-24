@@ -159,9 +159,6 @@
     <!-- Gestión del formulario de contacto y citas -->
     <script src="js/contact.js" defer></script>
 
-    <!-- Gestión de opiniones de clientes -->
-    <script src="js/reviews.js" defer></script>
-
 </head>
 
 
@@ -189,7 +186,6 @@
 
             <ul>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#opiniones">Opiniones</a></li>
                 <li><a href="#citas">Solicitar cita</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -262,7 +258,7 @@
 
         <section id="servicios" aria-labelledby="services-title">
 
-            <div class="section-heading">
+            <div class="section-heading reveal reveal-up">
 
                 <h2 id="services-title">
                     Nuestros servicios
@@ -279,7 +275,7 @@
             <div class="services-grid">
 
                 <!-- Servicio 1 -->
-                <article class="service-card">
+                <article class="service-card reveal reveal-up delay-1">
 
                     <img
                         src="assets/images/image1.webp"
@@ -307,7 +303,7 @@
 
 
                 <!-- Servicio 2 -->
-                <article class="service-card">
+                <article class="service-card reveal reveal-up delay-2">
 
                     <img
                         src="assets/images/image2.webp"
@@ -335,7 +331,7 @@
 
 
                 <!-- Servicio 3 -->
-                <article class="service-card">
+                <article class="service-card reveal reveal-up delay-3">
 
                     <img
                         src="assets/images/image3.webp"
@@ -363,7 +359,7 @@
 
 
                 <!-- Servicio 4 -->
-                <article class="service-card">
+                <article class="service-card reveal reveal-up delay-1">
 
                     <img
                         src="assets/images/image4.webp"
@@ -391,7 +387,7 @@
 
 
                 <!-- Servicio 5 -->
-                <article class="service-card">
+                <article class="service-card reveal reveal-up delay-2">
 
                     <img
                         src="assets/images/image5.webp"
@@ -419,7 +415,7 @@
 
 
                 <!-- Servicio 6 -->
-                <article class="service-card">
+                <article class="service-card reveal reveal-up delay-3">
 
                     <img
                         src="assets/images/image6.webp"
@@ -497,48 +493,6 @@
             <!-- TODO: Confirmar con el propietario qué servicios ofrece realmente -->
 
         </section>
-
-        
-        <!-- ==========================================
-            7. OPINIONES DE LOS CLIENTES
-            ========================================== -->
-
-        <section id="opiniones" aria-labelledby="reviews-title">
-
-            <div class="section-heading">
-
-                <h2 id="reviews-title">
-                    Opiniones de nuestros clientes
-                </h2>
-
-                <p>
-                    La confianza de nuestros clientes es
-                    nuestra mejor recompensa.
-                </p>
-
-                <p>
-                    Consulta las experiencias y valoraciones
-                    de quienes ya han confiado en nuestro taller.
-                </p>
-
-            </div>
-
-            <!-- Enlace externo a las opiniones de Google Maps -->
-            <div class="reviews-link">
-
-                <a
-                    href="https://maps.app.goo.gl/NKE6hRK3tn4XFmF39"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Leer las opiniones del taller en Google Maps (se abre en una nueva pestaña)"
-                >
-                    Leer opiniones
-                </a>
-
-            </div>
-
-        </section>
-
 
 
         <!-- ==========================================
@@ -675,7 +629,7 @@
             <div class="contact-container">
 
                 <!-- Información de contacto -->
-                <div class="contact-information">
+                <div class="contact-information reveal reveal-left">
 
                     <h3>Información de contacto</h3>
 
@@ -737,7 +691,7 @@
 
 
                 <!-- Horarios de atención -->
-                <div class="business-hours">
+                <div class="business-hours reveal reveal-right">
 
                     <h3>Nuestro horario</h3>
 
@@ -785,27 +739,51 @@
                 </div>
 
             </div>
+            
+            <div class="contact-container">
+                <!-- Ubicación del establecimiento -->
+                <div class="contact-information reveal reveal-left">
 
+                    <h3>Ubicación en el mapa</h3>
+                    <!--
+                        TODO:
+                        Añadir una imagen de la ubicación o fachada
+                        del establecimiento si se considera necesario.
+                    -->
 
-            <!-- Ubicación del establecimiento -->
-            <div class="map-container">
+                    <!-- TODO: Sustituir por el enlace real de Google Maps -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12298.77920481819!2d-0.542580124203534!3d39.58902827396617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd605f93a66ef8c7%3A0x4781a6ddd90667f0!2sTaller%20TEXACO%20LA%20POBLA!5e0!3m2!1sen!2ses!4v1795507388545!5m2!1sen!2ses" 
+                        width="20vw" 
+                        height="20vh"
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
 
-                <!--
-                    TODO:
-                    Añadir una imagen de la ubicación o fachada
-                    del establecimiento si se considera necesario.
-                -->
+                </div >
 
-                <!-- TODO: Sustituir por el enlace real de Google Maps -->
-                <a
-                    href="https://maps.app.goo.gl/NKE6hRK3tn4XFmF39"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Cómo llegar
-                </a>
+                <div class="business-hours reveal reveal-right">
+
+                    <h3>Opiniones de nuestros clientes</h3>
+
+                    <div class="reviews-link">
+
+                        <a
+                            href="https://maps.app.goo.gl/NKE6hRK3tn4XFmF39"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Leer las opiniones del taller en Google Maps (se abre en una nueva pestaña)"
+                            >
+                            Leer opiniones
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
+
 
         </section>
 
@@ -852,7 +830,6 @@
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#nosotros">Sobre nosotros</a></li>
                     <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#opiniones">Opiniones</a></li>
                     <li><a href="#citas">Solicitar cita</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
