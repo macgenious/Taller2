@@ -2031,6 +2031,8 @@ main {
 
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
+    grid-auto-rows: 1fr;
+
     gap: 30px;
 
     max-width: var(--container-width);
@@ -2092,6 +2094,14 @@ main {
 
     gap: 25px;
 
+}
+
+.contact-information iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    border: 0;
+    border-radius: 6px;
 }
 
 
@@ -3042,14 +3052,6 @@ const revealElements = document.querySelectorAll(".reveal");
 
 }
 
-revealElements.forEach(element => {
-    console.log(
-        element.className,
-        element.getBoundingClientRect().top,
-        window.innerHeight
-    );
-});
-
 ==================== ARCHIVO: js\navigation.js ====================
 
 
@@ -3225,9 +3227,6 @@ revealElements.forEach(element => {
     <!-- Gestión del formulario de contacto y citas -->
     <script src="js/contact.js" defer></script>
 
-    <!-- Gestión de opiniones de clientes -->
-    <script src="js/reviews.js" defer></script>
-
 </head>
 
 
@@ -3255,7 +3254,6 @@ revealElements.forEach(element => {
 
             <ul>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#opiniones">Opiniones</a></li>
                 <li><a href="#citas">Solicitar cita</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -3808,9 +3806,6 @@ revealElements.forEach(element => {
 
                 </div>
 
-            </div>
-            
-            <div class="contact-container">
                 <!-- Ubicación del establecimiento -->
                 <div class="contact-information reveal reveal-left">
 
@@ -3823,24 +3818,32 @@ revealElements.forEach(element => {
 
                     <!-- TODO: Sustituir por el enlace real de Google Maps -->
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12298.77920481819!2d-0.542580124203534!3d39.58902827396617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd605f93a66ef8c7%3A0x4781a6ddd90667f0!2sTaller%20TEXACO%20LA%20POBLA!5e0!3m2!1sen!2ses!4v1795507388545!5m2!1sen!2ses" 
-                        width="100%" 
-                        height="100%" 
+                        width="20vw" 
+                        height="20vh"
                         style="border:0;" 
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="strict-origin-when-cross-origin">
                     </iframe>
 
-                </div >
-
-                <div class="business-hours reveal reveal-right">
-
                     <h3>Opiniones de nuestros clientes</h3>
 
-                </div>
+                    <div class="reviews-link">
+
+                        <a
+                            href="https://maps.app.goo.gl/NKE6hRK3tn4XFmF39"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Leer las opiniones del taller en Google Maps (se abre en una nueva pestaña)"
+                            >
+                            Leer opiniones
+                        </a>
+
+                    </div>
+
+                </div >
 
             </div>
-
 
         </section>
 
@@ -3887,7 +3890,6 @@ revealElements.forEach(element => {
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#nosotros">Sobre nosotros</a></li>
                     <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#opiniones">Opiniones</a></li>
                     <li><a href="#citas">Solicitar cita</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
