@@ -2031,8 +2031,6 @@ main {
 
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    grid-auto-rows: 1fr;
-
     gap: 30px;
 
     max-width: var(--container-width);
@@ -2084,6 +2082,28 @@ main {
     border-bottom: 2px solid var(--color-primary);
 
 }
+
+.location-image-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.location-image-link img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+    transition: transform var(--transition);
+}
+
+.location-image-link:hover img {
+    transform: scale(1.01);
+}
+
 
 
 /* ==========================================
@@ -3062,9 +3082,6 @@ const revealElements = document.querySelectorAll(".reveal");
 ==================== ARCHIVO: pages\aviso-legal.html ====================
 
 
-==================== ARCHIVO: pages\cookies.html ====================
-
-
 ==================== ARCHIVO: pages\privacidad.html ====================
 
 
@@ -3330,7 +3347,7 @@ const revealElements = document.querySelectorAll(".reveal");
 
         <section id="servicios" aria-labelledby="services-title">
 
-            <div class="section-heading reveal reveal-up">
+            <div class="section-heading">
 
                 <h2 id="services-title">
                     Nuestros servicios
@@ -3820,16 +3837,19 @@ const revealElements = document.querySelectorAll(".reveal");
                         del establecimiento si se considera necesario.
                     -->
 
-                    <!-- TODO: Sustituir por el enlace real de Google Maps -->
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6149.263017120566!2d-0.5467047!3d39.5904545!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd605f788883fa65%3A0x8a6012cbca26fbe8!2sTALLERS%20RAMPI%20CB!5e0!3m2!1sen!2ses!4v1795530309501!5m2!1sen!2ses" 
-                        width="600" 
-                        height="450" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="strict-origin-when-cross-origin">
-                    </iframe>
+                    <a 
+                        href="https://maps.app.goo.gl/UTxTdS7ofaosZMA98"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="location-image-link"
+                        aria-label="Abrir la ubicación de Tallers Rampi CB en Google Maps"
+                    >
+                        <img 
+                            src="assets/images/ubicacion.avif" 
+                            alt="Ubicación de Tallers Rampi CB en La Pobla de Vallbona" 
+                            loading="lazy"
+                        >
+                    </a>
 
                     <h3>Opiniones de nuestros clientes</h3>
 
@@ -3981,10 +4001,6 @@ const revealElements = document.querySelectorAll(".reveal");
 
             <a href="pages/privacidad.html">
                 Política de privacidad
-            </a>
-
-            <a href="pages/cookies.html">
-                Política de cookies
             </a>
 
         </div>

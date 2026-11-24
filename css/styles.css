@@ -720,6 +720,14 @@ main {
 
     margin: auto;
 
+    overscroll-behavior: contain;
+
+}
+
+/* Bloquear el scroll de la página cuando el modal está abierto */
+html:has(dialog[open]),
+body:has(dialog[open]) {
+    overflow: hidden;
 }
 
 
